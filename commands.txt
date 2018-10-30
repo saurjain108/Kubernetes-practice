@@ -380,3 +380,73 @@
   380  ls | grep -R node
   381  ls | grep -R label
   382  history > commands.txt
+  383  git add *
+  384  git commit -m "adding yaml files"
+  385  git push 
+  386  kubectl get pods
+  387  kubectl delete pod nginx-deployment-c5b5c6f7c-dpcpj
+  388  kubectl get pods
+  389  cd ..
+  390  ls
+  391  cd Kubernetes-practice/
+  392  ls
+  393  vi deployment-edu.yml
+  394  kubectl create -f deployment-edu.yml 
+  395  kubectl get pods
+  396  kubectl get deplyments
+  397  kubectl get deployments
+  398  kubectl describe deploy 
+  399  kubectl get rs
+  400  kubectl describe rs
+  401  kubectl get rs
+  402  kubectl describe rs edu-deployment-74d554cd46
+  403  kubectl get rs
+  404  kubectl get svc
+  405  vi svc.yml
+  406  kubectl describe pods | grep app
+  407  vi svc.yml
+  408  kubectl describe pods | grep app
+  409  kubectl create -f svc.yml 
+  410  kubectl get svc
+  411  vi svc.yml
+  412  kubectl delete svc sample-svc
+  413  kubectl get svc
+  414  kubectl create -f svc.yml 
+  415  kubectl get svc
+  416  kubectl describe svc sample-svc
+  417  kubectl get pods
+  418  kubectl describe pod edu-deployment-74d554cd46-hfxfx
+  419  ping 172.31.111.176
+  420  curl 172.31.111.176:3001
+  421  curl 172.31.111.176:30001
+  422  curl 172.31.111.176:30001 | grep success
+  423  git add *
+  424  cd Kubernetes-practice/
+  425  ls
+  426  cd
+  427  ls
+  428  mv deployment-edu.yml svc.yml Kubernetes-practice/
+  429  cd Kubernetes-practice/
+  430  git add *
+  431  git commit -m "Adding a service file"
+  432  git push 
+  433  vi deployment-edu.yml 
+  434  kubectl apply -f deployment-edu.yml --record
+  435  kubectl get deployment
+  436  kubectl rollout stauts deployment edu-deployment
+  437  kubectl rollout status deployment edu-deployment
+  438  kubectl get rs
+  439  kubectl rollout status deployment edu-deployment
+  440  kubectl get rs
+  441  curl 172.31.111.176:30001 | grep success
+  442  curl 172.31.111.176:30001 | grep jenkins
+  443  cat deployment-edu.yml 
+  444  kubectl rollout history 
+  445  kubectl rollout history deployment edu-deployment
+  446  kubectl rollout undo deployment edu-deployment --to-revision=1
+  447  kubectl get rs
+  448  kubectl rollout status deployment edu-deployment
+  449  kubectl get rs
+  450  curl 172.31.111.176:30001 | grep jenkins
+  451  curl 172.31.111.176:30001 | grep success
+  452  history > commands.txt 

@@ -11,6 +11,6 @@ spec:
     spec:
       containers:
       - name: edu-deployment-app
-        image: devopstrainer/ubuntu:sample
+        image: jenkins
         ports:
         - containerPort: 8080   
