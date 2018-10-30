@@ -1,0 +1,382 @@
+    1  su
+    2  sudo apt-get update
+    3  sudo docker pull k8s.gcr.io/kube-scheduler-amd64:v1.10.1
+    4  sudo docker pull k8s.gcr.io/etcd-amd64:3.1.12
+    5  sudo docker pull  k8s.gcr.io/kube-apiserver-amd64:v1.10.1
+    6  sudo docker pull k8s.gcr.io/kube-controller-manager-amd64:v1.10.1
+    7  sudo kubeadm init --pod-network-cidr=10.244.0.0/16
+    8  mkdir -p $HOME/.kube
+    9  sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config 
+   10  sudo chown $(id -u):$(id -g) $HOME/.kube/config
+   11  kubectl apply -f https://raw.githubusercontent.com/coreos/flannel/master/Documentation/kube-flannel.yml
+   12  kubectl get pods --all-namespaces
+   13  kubectl get nodes
+   14  mkdir for_k8s
+   15  cd for_k8s/
+   16  vi pi-job.yaml
+   17  cat pi-job.yaml 
+   18  kubectl create -f pi-job.yaml
+   19  kubectl describe job pi
+   20  kubectl logs pi-pvbcc
+   21  ls
+   22  vi busybox.yml
+   23  cat pi-job.yaml 
+   24  cat busybox.yml 
+   25  kubectl create -f busybox.yml 
+   26  vi busybox.yml
+   27  kubectl create -f busybox.yml 
+   28  vi busybox.yml
+   29  kubectl create -f busybox.yml 
+   30  kubectl describe job busybox
+   31  kubectl logs busybox-v8hpr
+   32  history 
+   33  vi alpine.yml
+   34  kubectl create -f alpine.yml 
+   35  kubectl describe job alpine 
+   36  kubectl create -f alpine.yml 
+   37  cat alpine.yml 
+   38  kubectl describe job busybox
+   39  kubectl describe pod alpine
+   40  cat busybox.yml 
+   41  cat alpine.yml 
+   42  vi nginx.yml
+   43  kubectl create -f nginx.yml 
+   44  vi nginx.yml
+   45  cat alpine.yml 
+   46  kubectl create -f nginx.yml 
+   47  kubectl describe pod nginx-pod
+   48  kubectl get pods --all-namespaces
+   49  kubectl get pods -o wide
+   50  kubectl describe nodes my-node
+   51  kubectl delete pod alpine 
+   52  kubectl get pods -o wide
+   53  kubectl delete pod alpine 
+   54  kubectl create -f alpine.yml 
+   55  kubectl get pods -o wide
+   56  git add *
+   57  cd ..
+   58  ls
+   59  git clone https://github.com/saurjain108/Kubernetes-practice.git
+   60  ls
+   61  mv for_k8s/* Kubernetes-practice/
+   62  ls
+   63  cd Kubernetes-practice/
+   64  ls
+   65  cd ..
+   66  ls
+   67  rm for_k8s/
+   68  cat for_k8s/
+   69  ls for_k8s/
+   70  rm -rf for_k8s/
+   71  ls
+   72  cd Kubernetes-practice/
+   73  ls
+   74  git add *
+   75  git commit -m "initial commit, adding pod and job"
+   76  git config --global user.email "rony.jain108@gmail.com"
+   77  git config --global user.name "Raunak Jain"
+   78  git commit -m "initial commit, adding pod and job"
+   79  git push
+   80  ls
+   81  history 
+   82  kubectl get nodes
+   83  kubectl get nodeskubectl describe node saineel145.mylabserver.com
+   84  kubectl describe node saineel145.mylabserver.com
+   85  kubectl get pods --all-namespaces -o wide
+   86  kubectl get pods -n kube-system
+   87  ls
+   88  cd Kubernetes-practice/
+   89  kubectl get nodes
+   90  kubectl describe node saineel145.mylabserver.com
+   91  kubectl get pods --all-namespaces -o wide 
+   92  kubectl get nodes
+   93  kubectl describe node saineel144.mylabserver.com
+   94  kubectl describe node saineel145.mylabserver.com
+   95  kubectl get nodes
+   96  ssh user@saineel145.mylabserver.com
+   97  kubectl describe node saineel144.mylabserver.com
+   98  kubectl describe node saineel145.mylabserver.com
+   99  ls
+  100  cd Kubernetes-practice/
+  101  ls
+  102  cat nginx.yml 
+  103  kubectl get deployments 
+  104  kubectl create -f nginx.yml 
+  105  kubectl get deployments 
+  106  kubectl describe pod nginx-pod
+  107  kubectl get pods
+  108  kubectl get jobs
+  109  kubectl get pod nginx-pod -o yaml
+  110  kubectl get pod nginx-pod -o yaml > nginx-output.yml\
+  111  kubectl get pod nginx-pod -o yaml > nginx-output.yml
+  112  ls
+  113  lsa
+  114  ls
+  115  cat nginx-output.yml 
+  116  vi nginx-deployment.ml
+  117  mv nginx-deployment.ml nginx-deployment.yml 
+  118  vi nginx-deployment.yml
+  119  kubectl create -f nginx-deployment.yml 
+  120  kubectl get deployments
+  121  kubectl describe deplyment nginx-deployment.yml 
+  122  kubectl describe deployment nginx-deployment.yml 
+  123  kubectl describe deployment nginx-deployment 
+  124  kubectl describe deployment nginex-deployment 
+  125  ls
+  126  git add *
+  127  git commit -m "adding deployment yaml"
+  128  git push 
+  129  kubectl set image deployment/nginex-deployment nginx=nginx:1.8
+  130  kubectl rollout status deployment/nginex-deployment
+  131  kubectl describe deployment deployment/nginex-deployment
+  132  kubectl describe deployment nginex-deployment
+  133  vi nginx-deployment.yml 
+  134  kubectl apply -f nginx-deployment.yml 
+  135  kubectl rollout status deployment/nginex-deployment
+  136  kubectl rollout history deployment/nginex-deployment --revision=3
+  137  kubectl rollout history deployment/nginex-deployment --revision=2
+  138  kubectl rollout undo deployment/nginex-deployment --to-revision=2
+  139  kubectl rollout undo deployment/nginex-deployment -to--revision=2
+  140  kubectl rollout undo deployment/nginex-deployment --to-revision=2
+  141  kubectl get deployments
+  142  kubectl rollout undo deployment/nginex-deployment --to-revision=2
+  143  vi nginx-deployment.yml 
+  144  kubectl apply -f nginx-deployment.yml 
+  145  kubectl describe deployment nginex-deployment
+  146  kubectl get pods -l app=nginx -o wide
+  147  ls
+  148  vi nginx-deployment.yml 
+  149  kubectl create configmap my-map --from-literal=city=Austin
+  150  kubectl get configmaps
+  151  kubectl describe configmaps my-map
+  152  kubectl get configmap my-map -o yaml
+  153  vi pod-config.yml
+  154  kubectl create -f pod-config.yml 
+  155  vi pod-config.yml
+  156  kubectl create -f pod-config.yml 
+  157  vi pod-config.yml
+  158  kubectl create -f pod-config.yml 
+  159  vi pod-config.yml
+  160  kubectl create -f pod-config.yml 
+  161  vi pod-config.yml
+  162  kubectl get configmaps
+  163  kubectl describe configmaps my-map
+  164  vi pod-config.yml
+  165  kubectl create -f pod-config.yml 
+  166  vi pod-config.yml
+  167  ls
+  168  cd Kubernetes-practice/
+  169  ls
+  170  cat pod-config.yml 
+  171  cat nginx-deployment.yml 
+  172  cat pod-config.yml 
+  173  cat nginx-deployment.yml 
+  174  mkdir practice
+  175  cd practice/
+  176  vi delete1.yml
+  177  kubectl create -f delete1.yml 
+  178  vi delete1.yml
+  179  kubectl create -f delete1.yml 
+  180  vi delete1.yml
+  181  kubectl create -f delete1.yml 
+  182  kubectl create -f delete1.yml cd ..
+  183  cd ..
+  184  kubectl get deployments 
+  185  kubectl describe deployment nginex-deployment
+  186  kubectl deployment/nginex-deployment --replicas=3
+  187  kubectl scale deployment/nginex-deployment --replicas=3
+  188  kubectl describe deployment nginex-deployment
+  189  kubectl get deployments 
+  190  kubectl get pods 
+  191  kubectl deployment/nginex-deployment --replicas=1
+  192  kubectl scale deployment/nginex-deployment --replicas=1
+  193  kubectl get pods 
+  194  kubectl scale deployment/nginex-deployment --replicas=4
+  195  kubectl get pods 
+  196  kubectl scale deployment/nginex-deployment --replicas=3
+  197  kubectl get pods 
+  198  kubectl delete pod nginex-deployment-6987cdb55b-mclnp
+  199  kubectl get pods 
+  200  kubectl get deployments 
+  201  ls
+  202  cd Kubernetes-practice/
+  203  ls
+  204  kubectl get deployments 
+  205  kubectl delete deployment nginex-deployment
+  206  kubectl get deployments 
+  207  kubectl get pods
+  208  rm nginx-deployment.yml 
+  209  vi nginx-deployment.yml 
+  210  kubectl create -f nginx-deployment.yml 
+  211  vi nginx-deployment.yml 
+  212  kubectl create -f nginx-deployment.yml 
+  213  vi nginx-deployment.yml 
+  214  kubectl create -f nginx-deployment.yml 
+  215  vi nginx-deployment.yml 
+  216  kubectl scale deployment/nginex-deployment --replicas=1
+  217  kubectl get pods
+  218  kubectl scale deployment/nginex-deployment --replicas=1
+  219  kubectl get pods
+  220  kubectl scale deployment/nginx-deployment --replicas=1
+  221  kubectl get pods
+  222  kubectl scale deployment/nginx-deployment --replicas=10
+  223  kubectl get pods
+  224  kubectl scale deployment/nginx-deployment --replicas=100
+  225  kubectl get pods
+  226  kubectl get deployments
+  227  kubectl describe deployment nginx-deployment
+  228  kubectl scale deployment/nginx-deployment --replicas=3
+  229  kubectl get pods
+  230  kubectl get deployments
+  231  kubectl get pods
+  232  kubectl describe pod nginx-deployment-c5b5c6f7c-dpcpj
+  233  kubectl describe pod nginx-deployment-c5b5c6f7c-dpcpj | grep saineel
+  234  cd Kubernetes-practice/
+  235  ls
+  236  vi nginx-ReplicationController.yml
+  237  vi nginx-ReplicaSet.yml
+  238  ls
+  239  kubectl get ReplicationController
+  240  kubectl get ReplicaSet
+  241  kubectl get deployment
+  242  kubectl describe deplyment nginx-deployment
+  243  kubectl describe deployment nginx-deployment
+  244  kubectl get ReplicaSet
+  245  kubectl describe deployment nginx-deployment | grep c5b5c6f7c
+  246  kubectl create -f nginx-ReplicationController.yml 
+  247  kubectl get ReplicationController
+  248  git add *
+  249  git commit -m "Adding a ReplicaSet and ReplicationController"
+  250  git push 
+  251  kubectl get pods 
+  252  kubectl get pods -l app=nginx
+  253  kubectl label pod nginx-5gxmr test=sure --overwrite
+  254  kubectl describe pod l test=sure
+  255  kubectl describe pod -l test=sure
+  256  ping 172.31.111.176
+  257  history 
+  258  kubectl get pods -l app=nginx -o wide
+  259  kubectl get pods -l app=nginx
+  260  kubectl get pods 
+  261  ls
+  262  kubectl get pod nginx-5gxmr -o yaml
+  263  kubectl get pod nginx-5gxmr -o yaml | grep sure
+  264  kubectl get pods -l app=nginx tier=toptier
+  265  kubectl label pods -l app=nginx tier=toptier
+  266  kubectl get pod l tier=toptier
+  267  kubectl get pods -l app=nginx tier=toptier
+  268  kubectl get pods -l app=nginx
+  269  kubectl get pods -l tier=toptier
+  270  kubectl get daemensets -n kube-system
+  271  kubectl get daemonsets -n kube-system
+  272  vi DaemonSet.yml
+  273  ls
+  274  mv DaemonSet.yml daemonset.yml
+  275  mv daemonset.yml Kubernetes-practice/
+  276  ls
+  277  cd Kubernetes-practice/
+  278  kubectl create -f daemonset.yml 
+  279  vi daemonset.yml 
+  280  kubectl create -f daemonset.yml 
+  281  kubectl get daemonSets
+  282  kubectl get daemensets -n kube-system
+  283  kubectl get pods -l app=nginx tier=toptier
+  284  kubectl get pods
+  285  kubectl get deployment
+  286  kubectl get deployments
+  287  kubectl get deploymentsss
+  288  kubectl get DaemonSets
+  289  kubectl describe DaemonSets daemon-example
+  290  kubectl describe DaemonSets daemon-example | grep sainee
+  291  kubectl get nodes 
+  292  kubectl describe node saineel144.mylabserver.com
+  293  kubectl describe node saineel144.mylabserver.com | grep Tain
+  294  kubectl describe node saineel145.mylabserver.com | grep Tain
+  295  kubectl describe node saineel145.mylabserver.com
+  296  kubectl get notes
+  297  kubectl get nodes
+  298  kubectl label saineel145.mylabserver.com speed=fastest
+  299  kubectl label node saineel145.mylabserver.com speed=fastest
+  300  kubectl describe saineel145.mylabserver.com | grep fastest 
+  301  kubectl describe node saineel145.mylabserver.com | grep fastest 
+  302  kubectl describe node saineel145.mylabserver.com
+  303  kubectl get pods
+  304  kubectl get deployment
+  305  kubectl get daemonSets
+  306  kubectl rollout status deployment/nginex-deployment
+  307  kubectl rollout status deployment/nginx-deployment
+  308  kubectl get rollouts
+  309  kubectl get rollout
+  310  kubectl get ReplicaSet
+  311  kubectl get ReplicaSets
+  312  kubectl get ReplicatationController
+  313  kubectl describe job busybox
+  314  ls
+  315  cd Kubernetes-practice/
+  316  ls
+  317  kubectl get ReplicationController
+  318  kubectl show  ReplicationController nginx
+  319  kubectl describe  ReplicationController nginx
+  320  kubectl get node 
+  321  kubectl label node saineel145.mylabserver.com myDarling=bestOne
+  322  kubectl describe node saineel144.mylabserver.com | Darling
+  323  kubectl describe node saineel144.mylabserver.com | grep Darling
+  324  kubectl describe node saineel145.mylabserver.com | grep Darling
+  325  vi podformyDarling=bestOne.yml
+  326  kubectl create -f podformyDarling\=bestOne.yml 
+  327  kubectl get pods
+  328  kubectl describe pod busybox
+  329  kubectl describe pod busybox | saineel
+  330  kubectl describe pod busybox | grep saineel
+  331  cd Kubernetes-practice/
+  332  cd
+  333  kubectl get pods
+  334  kubectl logs pi-pvbcc
+  335  cd /var/log/containers/
+  336  ls -l
+  337  cat kube-scheduler-saineel144.mylabserver.com_kube-system_kube-scheduler-13af55f048fd060b62a7ab9a6b9c0c4a72fd29a0b5ee396759c9e488d1062945.log 
+  338  sudo cat kube-scheduler-saineel144.mylabserver.com_kube-system_kube-scheduler-13af55f048fd060b62a7ab9a6b9c0c4a72fd29a0b5ee396759c9e488d1062945.log 
+  339  kubectl get ingress
+  340  kubectl get pods
+  341  kubectl get deplyments
+  342  kubectl get deployments
+  343  cd k
+  344  cd Kubernetes-practice/
+  345  l
+  346  car nginx-deployment.yml 
+  347  cat nginx-deployment.yml 
+  348  ls | grep -R matchLabel
+  349  ls
+  350  kubectl get pods
+  351  kubectl get nginx-deployment.yml 
+  352  cat nginx-deployment.yml 
+  353  kubectl scale deployment/nginx-deployment --replicas=300
+  354  kubectl get pods
+  355  kubectl decribe pod nginx-deployment-c5b5c6f7c-vtc28
+  356  kubectl describe pod nginx-deployment-c5b5c6f7c-vtc28
+  357  kubectl get pods
+  358  kubectl scale deployment/nginx-deployment --replicas=3
+  359  kubectl get pods
+  360  kubectl get pods -n kube-system
+  361  kubectl get pods 
+  362  kubectl get services 
+  363  ls
+  364  cd Kubernetes-practice/
+  365  ls
+  366  vi pod-edu.yml
+  367  kubectl create -f pod-edu.yml 
+  368  vi pod-edu.yml
+  369  vi pod-config.yml 
+  370  cat pod-edu.yml 
+  371  vi pod-config.yml 
+  372  cd Kubernetes-practice/
+  373  ls
+  374  vi pod-edu.yml 
+  375  kubectl create -f pod-edu.yml 
+  376  kubectl get pods
+  377  history | grep node
+  378  ls | grep -R node
+  379  cd Kubernetes-practice/
+  380  ls | grep -R node
+  381  ls | grep -R label
+  382  history > commands.txt
