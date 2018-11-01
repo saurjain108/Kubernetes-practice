@@ -1,0 +1,9 @@
+reference - https://kubernetes.io/docs/home/?path=users&persona=app-developer&level=foundational
+
+1. With multiple-zone clusters, this spreading behavior is extended across zones (to reduce the impact of zone failures.) (This is achieved via SelectorSpreadPriority)
+
+2. When persistent volumes are created, the "PersistentVolumeLabel" admission controller automatically adds zone labels to them. And "VolumeZonePredicate" predicate) will then ensure that pods that claim a given volume are only placed into the same zone as that volume, as volumes cannot be attached across zones.
+
+3. Volume zone-affinity will only work with a "PersistentVolume", and will not work if you directly specify an EBS volume 
+
+4. 

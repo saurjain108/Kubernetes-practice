@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: pod-test
+  labels:
+    app: myapp
+spec:
+  containers:
+  - name: pod-test-container
+    image: busybox
+    command: ['sh', '-c', 'Hello K8s && sleep 1000' ]
+
+
