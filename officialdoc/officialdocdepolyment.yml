@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nginx-from-official-docs
+spec:
+  selector:
+    matchLabels:
+      app: myapp
+  minReadySeconds: 5
+  template:
+    metadata:
+      labels:
+        app: myapp
+    spec:
+      containers:
+      - name: nginx-official-doc
+        image: nginx:1.7.9
+        ports:
+        - containerPort: 80
+          
