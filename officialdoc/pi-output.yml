@@ -1,0 +1,101 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  creationTimestamp: 2018-10-25T02:58:26Z
+  generateName: pi-
+  labels:
+    controller-uid: d8465cda-d801-11e8-83ab-0a4ce1c3ba98
+    job-name: pi
+  name: pi-pvbcc
+  namespace: default
+  ownerReferences:
+  - apiVersion: batch/v1
+    blockOwnerDeletion: true
+    controller: true
+    kind: Job
+    name: pi
+    uid: d8465cda-d801-11e8-83ab-0a4ce1c3ba98
+  resourceVersion: "5321"
+  selfLink: /api/v1/namespaces/default/pods/pi-pvbcc
+  uid: d84803db-d801-11e8-83ab-0a4ce1c3ba98
+spec:
+  containers:
+  - command:
+    - perl
+    - -Mbignum=bpi
+    - -wle
+    - print bpi(2000)
+    image: perl
+    imagePullPolicy: Always
+    name: pi
+    resources: {}
+    terminationMessagePath: /dev/termination-log
+    terminationMessagePolicy: File
+    volumeMounts:
+    - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+      name: default-token-22nrb
+      readOnly: true
+  dnsPolicy: ClusterFirst
+  nodeName: saineel145.mylabserver.com
+  priority: 0
+  restartPolicy: Always
+  schedulerName: default-scheduler
+  securityContext: {}
+  serviceAccount: default
+  serviceAccountName: default
+  terminationGracePeriodSeconds: 30
+  tolerations:
+  - effect: NoExecute
+    key: node.kubernetes.io/not-ready
+    operator: Exists
+    tolerationSeconds: 300
+  - effect: NoExecute
+    key: node.kubernetes.io/unreachable
+    operator: Exists
+    tolerationSeconds: 300
+  volumes:
+  - name: default-token-22nrb
+    secret:
+      defaultMode: 420
+      secretName: default-token-22nrb
+status:
+  conditions:
+  - lastProbeTime: null
+    lastTransitionTime: 2018-10-25T02:58:27Z
+    reason: PodCompleted
+    status: "True"
+    type: Initialized
+  - lastProbeTime: null
+    lastTransitionTime: 2018-10-25T02:59:11Z
+    reason: PodCompleted
+    status: "False"
+    type: Ready
+  - lastProbeTime: null
+    lastTransitionTime: 2018-10-25T02:59:11Z
+    reason: PodCompleted
+    status: "False"
+    type: ContainersReady
+  - lastProbeTime: null
+    lastTransitionTime: 2018-10-25T02:58:26Z
+    status: "True"
+    type: PodScheduled
+  containerStatuses:
+  - containerID: docker://9d5ad5bf33d7274af906fe58410bd57174b054d1c12dc31b2db87044acd83822
+    image: perl:latest
+    imageID: docker-pullable://perl@sha256:914e53a66b1e7f0f8c6cbd790dfc880f7837102a7c56537874ff098545c1f5c6
+    lastState: {}
+    name: pi
+    ready: false
+    restartCount: 0
+    state:
+      terminated:
+        containerID: docker://9d5ad5bf33d7274af906fe58410bd57174b054d1c12dc31b2db87044acd83822
+        exitCode: 0
+        finishedAt: 2018-10-25T02:59:10Z
+        reason: Completed
+        startedAt: 2018-10-25T02:59:05Z
+  hostIP: 172.31.111.176
+  phase: Succeeded
+  podIP: 10.244.1.2
+  qosClass: BestEffort
+  startTime: 2018-10-25T02:58:27Z

@@ -450,3 +450,387 @@
   450  curl 172.31.111.176:30001 | grep jenkins
   451  curl 172.31.111.176:30001 | grep success
   452  history > commands.txt 
+  453  git add *
+  454  git commit -m " adding rollout rollback "
+  455  git push
+  456  find . config-default.sh
+  457  find . kube-up.sh
+  458  cd Kubernetes-practice/
+  459  git add *
+  460  git status 
+  461  vi Notesfromofficialdoc.txt
+  462  kubectl get nodes --show-label
+  463  kubectl get nodes --show-labels
+  464  kubectl get pv --show-labels
+  465  kubectl get nodes --show-labels
+  466  cd Kubernetes-practice/
+  467  ls
+  468  mkdir officialdoc
+  469  cd officialdoc/
+  470  vi pod.yml
+  471  kubectl create -f pod.yml
+  472  kubectl get pods
+  473  kubectl delete pod alpine busybox-v8hpr daemon-example-cvt7n 
+  474  kubectl get pods
+  475  kubectl get deployments
+  476  kubectl delete deployment edu-deployment
+  477  kubectl get pods
+  478  kubectl get svcs
+  479  kubectl get svc
+  480  ls
+  481  vi service.yml
+  482  kubectl create -f service.yml 
+  483  kubectl get svc
+  484  kubectl describe svc sample-svc
+  485  kubectl describe svc service-test
+  486  kubectl get namespace
+  487  kubectl get namespaces
+  488  kubectl describe namespaces kube-system
+  489  kubectl describe namespaces default 
+  490  kubectl get pods -l app=myapp
+  491  kubectl get pods --show-labels
+  492  kubectl get pods -l app=nginx
+  493  kubectl get pods -l 'app in (nginx)'
+  494  kubectl get pods -l 'app in (nginx)', 'app in (myapp)'
+  495  kubectl get pods -l 'app in (nginx), app in (myapp)'
+  496  kubectl get pods -l ' app in (myapp)'
+  497  kubectl get pods -l 'app in (nginx)'
+  498  kube-system
+  499  kubectl get pods --field-selector ""
+  500  kubectl get pods
+  501  kubectl stop pod pod-test
+  502  kubectl delete pod pod-test
+  503  kubectl create -f pod.yml
+  504  kubectl get pods
+  505  kubectl get pods --field-selector ""
+  506  kubectl get pods
+  507  kubectl run nginx --image nginx
+  508  kubectl get pods
+  509  kubectl describe pod nginx-dbddb74b8-wcjd6
+  510  kubectl describe pod nginx-dbddb74b8-wcjd6 | grep node
+  511  kubectl describe pod nginx-dbddb74b8-wcjd6 | grep Node
+  512  kubectl create service nodeport testing
+  513  kubectl get pods
+  514  kubectl logs pod busybox
+  515  kubectl --help | grep log
+  516  kubectl --help
+  517  history | grep log
+  518  kubectl get pods
+  519  kubectl logs pod-test
+  520  kubectl logs pi-pvbcc
+  521  kubectl logs nginx-deployment-c5b5c6f7c-bl22g
+  522  kubectl apply -f configs/
+  523  cd Kubernetes-practice/
+  524  ls
+  525  cd practice/
+  526  ls
+  527  kubectl get pod nginx-5gxmr -o yaml | grep sure
+  528  kubectl get pod nginx-pod -o yaml > nginx-output.yml
+  529  ls
+  530  get pods
+  531  kubectl get pods
+  532  rm nginx-output.yml 
+  533  kubectl get -f abc -o yaml
+  534  kubectl get -f delete1.yml -o yaml
+  535  kubectl create --edit
+  536  kubectl create --edit | grep edit
+  537  kubectl create -f delete1.yml --edit 
+  538  cd Kubernetes-practice/
+  539  ls
+  540  cd Kubernetes-practice/
+  541  git add *
+  542  git stautd
+  543  git stautss
+  544  git stauts
+  545  git status
+  546  git commit -m "Adding some practice yaml codes"
+  547  git push 
+  548  ls
+  549  cd officialdoc/
+  550  ls
+  551  vi pod.yml 
+  552  kubectl get pods 
+  553  kubectl apply -f pod.yml 
+  554  kubectl get pods 
+  555  kubectl delete pod pod-test
+  556  kubectl get pods 
+  557  kubectl logs pod-testing 
+  558  vi pod.yml 
+  559  kubectl apply -f pod.yml 
+  560  kubectl delete pod pod-testing 
+  561  kubectl create -f pod.yml 
+  562  kubectl get pods
+  563  kubectl logs pod-testing
+  564  kubectl scale deployment/nginx-deployment --replicas=3
+  565  kubectl get pods
+  566  kubectl scale deployment/nginx-deployment --replicas=30
+  567  kubectl get pods
+  568  kubectl scale deployment/nginx-deployment --replicas=3
+  569  cd
+  570  cd Kubernetes-practice/
+  571  ls
+  572  vi Notesfromofficialdoc.txt 
+  573  cd officialdoc/
+  574  ls
+  575  vi doc-nginx-deployment.yml
+  576  ls
+  577  kubectl apply -f doc-nginx-deployment.yml 
+  578  vi doc-nginx-deployment.yml
+  579  kubectl apply -f doc-nginx-deployment.yml 
+  580  vi doc-nginx-deployment.yml
+  581  kubectl apply -f doc-nginx-deployment.yml 
+  582  mv doc-nginx-deployment.yml officialdocdepolyment.yml
+  583  ls
+  584  kubectl apply -f officialdocdepolyment.yml 
+  585  vi officialdocdepolyment.yml 
+  586  kubectl apply -f officialdocdepolyment.yml 
+  587  kubectl get deploments 
+  588  kubectl get deployments 
+  589  kubectl scale deployment/nginx-from-official-docs --replicas=3
+  590  kubectl get deployments 
+  591  kubectl get pods
+  592  kubectl get deploment
+  593  kubectl get deployment
+  594  kubectl get nginx-from-official-docs -o yaml > nginx-from-official-docs-output.yml
+  595  kubectl get deployment nginx-from-official-docs -o yaml > nginx-from-official-docs-output.yml
+  596  ls
+  597  cat nginx-from-official-docs-output.yml 
+  598  cat nginx-from-official-docs-output.yml | grep replica
+  599  cat nginx-from-official-docs-output.yml 
+  600  cd Kubernetes-practice/
+  601  ls
+  602  kubectl get pods -l app=myapp
+  603  kubectl annotate pods pod-testing description=" pod for testing "
+  604  kubectl describe pod-testing
+  605  kubectl describe pod pod-testing
+  606  kubectl get pods
+  607  kubectl describe pod busybox
+  608  kubectl annotate pods busybox  description=" busybox pod "
+  609  kubectl describe pod busybox | grep  busybox pod
+  610  kubectl describe pod busybox | grep busybox pod
+  611  kubectl describe pod busybox | grep busybox
+  612  kubectl describe pod busybox | grep "busybox pod"
+  613  kubectl describe logs busybox
+  614  kubectl logs busybox
+  615  kubectl logs pod busybox
+  616  kubectl logs pods busybox
+  617  kubectl logs pod-testing
+  618  kubectl logs pod-testing --previous
+  619  ls
+  620  ls | grep -R testing
+  621  cd officialdoc/
+  622  ls | grep -R testing
+  623  vi pod.yml 
+  624  kubectl apply -f pod.yml 
+  625  vi pod.yml 
+  626  kubectl apply -f pod.yml 
+  627  ls
+  628  kubectl apply -f pod.yml 
+  629  vi pod.yml 
+  630  kubectl apply -f pod.yml 
+  631  vi pod.yml 
+  632  kubectl apply -f pod.yml 
+  633  kubectl logs pod-testing --previous
+  634  vi pod.yml 
+  635  kubectl apply -f pod.yml 
+  636  kubectl logs pod-testing
+  637  kubectl logs pod-testing --previous
+  638  vi pod.yml 
+  639  kubectl apply -f pod.yml 
+  640  vi pod.yml 
+  641  kubectl apply -f pod.yml 
+  642  kubectl create -f pod.yml 
+  643  kubectl delete pod pod-testing
+  644  kubectl create -f pod.yml 
+  645  kubectl logs pod-testing
+  646  vi pod.yml 
+  647  kubectl apply -f pod.yml 
+  648  kubectl delete pod pod-testing
+  649  kubectl create -f pod.yml 
+  650  kubectl logs pod-testing
+  651  vi pod.yml 
+  652  kubectl delete pod pod-testing
+  653  vi pod.yml 
+  654  /home/ls
+  655  ls /home/
+  656  touch /home/abc.txt
+  657  sudo touch /home/abc.txt
+  658  touch /usr/abc.txt
+  659  vi pod.yml 
+  660  kubectl create -f pod.yml 
+  661  kubectl logs pod-testing
+  662  kubectl get pods
+  663  kubectl delete pod pod-testing
+  664  history 
+  665  history | grep apply
+  666  vi pod.yml 
+  667  kubectl delete pod pod-testing
+  668  kubectl create -f pod.yml 
+  669  kubectl logs pod-testing
+  670  kubectl delete pod pod-testing
+  671  kubectl get svc
+  672  kubectl get ns
+  673  kubectl describe ns kube-system
+  674  kubectl get pods 
+  675  kubectl get pod daemon-example-q9l8t -o yaml 
+  676  kubectl get pod daemon-example-q9l8t -o yaml | grep name
+  677  ls | grep - R daemon
+  678  cd Kubernetes-practice/
+  679  ls | grep -R daemon
+  680  vi daemonset.yml 
+  681  kubectl 
+  682  kubectl | grep node
+  683  kubectl get nodes 
+  684  kubectl get nodes -o
+  685  kubectl descibe podios 
+  686  kubectl descibe pods
+  687  kubectl describe pods
+  688  kubectl describe pod busybox
+  689  kubectl get pods
+  690  kubectl describe pod pi-pvbcc
+  691  kubectl logs pod pi-pvbcc
+  692  kubectl logs pi-pvbcc
+  693  kubectl exex pi-pvbcc
+  694  kubectl exec pi-pvbcc
+  695  kubectl describe pod pi-pvbcc | grep Host
+  696  kubectl describe pod pi-pvbcc | External
+  697  kubectl describe pod pi-pvbcc | grep External
+  698  get nodes
+  699  kubectlget nodes
+  700  kubectl get nodes
+  701  kubectl get nodes --node-ip 
+  702  kubectl get nodes
+  703  kubectl get nodes --node-ip saineel145.mylabserver.com
+  704  kubectl get --node-ip saineel145.mylabserver.com
+  705  man kubectl 
+  706  kubectl 
+  707  kubectl > kubectl.txt
+  708  git add 
+  709  git add *
+  710  git status 
+  711  git commit "adding some yaml from official doc and txt"
+  712  git commit -m "adding some yaml from official doc and txt"
+  713  git push 
+  714  kubectl | grep Load
+  715  kubectl | grep load
+  716  kubectl | grep get
+  717  cd Kubernetes-practice/
+  718  cd officialdoc/
+  719  ls
+  720  vi aaa.yml
+  721  kubectl create -f aaa.yml 
+  722  vi aaa.yml
+  723  kubectl create -f aaa.yml 
+  724  vi aaa.yml
+  725  kubectl create -f aaa.yml 
+  726  kubectl logs mypod1
+  727  vi aaa.yml
+  728  kubectl apply -f aaa.yml 
+  729  vi aaa.yml
+  730  kubectl apply -f aaa.yml 
+  731  kubec get pods
+  732  kubectl get pods
+  733  kubectl delete pod mypod1 
+  734  kubectl get pods
+  735  kubectl apply -f aaa.yml 
+  736  kubectl logs mypod1
+  737  vi aaa.yml
+  738  kubectl apply -f aaa.yml 
+  739  rm aaa.yml 
+  740  kubectl delete pod mypod1 
+  741  kubectl get pods 
+  742  kubectl status pods 
+  743  kubectl --help | grep status
+  744  kubectl --help | grep Status
+  745  kubectl --help
+  746  kubectl status --help
+  747  kubectl get --help
+  748  kubectl get pods --field-selector=status.phase=Running
+  749  kubectl get pods --field-selector=status.phase=Complited
+  750  kubectl get pods --field-selector=status.phase=Completed
+  751  kubectl get pods --field-selector=status
+  752  kubectl get pods --field-selector=status.phase=Succeeded
+  753  kubectl get pods --field-selector=status.phase=Failed
+  754  kubectl get pods --field-selector=status.phase=Pending 
+  755  kubectl get pods --field-selector=status.phase=Unknown
+  756  kubectl describe pod pi-pvbcc | grep Succeeded
+  757  history 
+  758  kubectl describe pod pi-pvbcc | grep lastProbeTime
+  759  kubectl get pod busybox -o yaml | grep name
+  760  kubectl get pod busybox -o yaml | grep lastProbeTime
+  761  kubectl get pod busybox -o yaml | grep message
+  762  kubectl get pod busybox -o yaml | grep Success
+  763  kubectl get pod busybox -o yaml | grep Fail
+  764  kubectl get pods
+  765  kubectl desacribe busybox 
+  766  kubectl describe busybox 
+  767  kubectl delete pod busybox 
+  768  kubectl get pod pi-pvbcc -o yaml | grep Success
+  769  kubectl get pod pi-pvbcc -o yaml | grep Compl
+  770  kubectl get pod pi-pvbcc -o yaml | grep phase 
+  771  kubectl get pods pi-pvbcc --field-selector=status.phase=Unknown
+  772  kubectl get pods pi-pvbcc status.phase=Unknown
+  773  kubectl get pod pi-pvbcc -o yaml | grep lastTransitionTime
+  774  kubectl get pod pi-pvbcc -o yaml | grep lastProbeTime
+  775  kubectl get pod pi-pvbcc -o yaml | grep PodScheduled
+  776  kubectl get pod pi-pvbcc -o yaml | grep Unschedulable
+  777  kubectl get pod pi-pvbcc -o yaml | grep ContainersReady
+  778  kubectl get pod pi-pvbcc -o yaml | grep livenessProbe
+  779  kubectl get pod pi-pvbcc -o yaml | grep ContainersReady
+  780  kubectl get pod pi-pvbcc -o yaml | grep Probe 
+  781  kubectl get pod pi-pvbcc -o yaml | grep restartPolicy
+  782  kubectl get pods pi-pvbcc - yaml
+  783  kubectl get pods pi-pvbcc -o yaml
+  784  kubectl get pods pi-pvbcc -o yaml | grep restartPolicy
+  785  kubectl get pods pi-pvbcc -o yaml > pi-output.yml
+  786  kubectl delete pod pi-pvbcc
+  787  vi pi-output.yml 
+  788  car pi-output.yml | never
+  789  cat pi-output.yml | never
+  790  cat pi-output.yml | grep never
+  791  cat pi-output.yml | grep Never
+  792  vi pi-output.yml 
+  793  kubectl create -f pi-output.yml 
+  794  kubectl logs pi-pvbcc
+  795  kubectl get pods 
+  796  ls
+  797  cd ..
+  798  ls
+  799  kubectl create -f pi-job.yaml 
+  800  vi pi-job.yaml 
+  801  kubectl create -f pi-job.yaml 
+  802  kubectl get pods
+  803  kubectl logs pi-pvbcc
+  804  kubectl logs pi1-lhh6z
+  805  kubectl delete pi-pvbcc
+  806  kubectl delete pod pi-pvbcc
+  807  cd Kubernetes-practice/officialdoc/
+  808  vi initcontainer.yml
+  809  kubectl create -f initcontainer.yml 
+  810  vi initcontainer.yml
+  811  kubectl create -f initcontainer.yml 
+  812  vi initcontainer.yml
+  813  kubectl create -f initcontainer.yml 
+  814  kubectl get pods
+  815  cd Kubernetes-practice/officialdoc/
+  816  vi requestingspecificmemory.yml
+  817  kubectl apply -f requestingspecificmemory.yml 
+  818  kubectl describe frontend
+  819  kubectl describe pod frontend
+  820  kubectl describe pod frontend | grep -A 3 Events
+  821  kubectl get pods 
+  822  kubectl logs frontend
+  823  vi requestingspecificmemory.yml
+  824  kubectl apply -f requestingspecificmemory.yml 
+  825  vi requestingspecificmemory.yml
+  826  kubectl delete pod frontend
+  827  kubectl apply -f requestingspecificmemory.yml 
+  828  vi requestingspecificmemory.yml
+  829  kubectl apply -f requestingspecificmemory.yml 
+  830  kubectl get pods
+  831  ls
+  832  ls cd../
+  833  ls cd./
+  834  cd ..
+  835  ls
+  836  history > commands.txt 
