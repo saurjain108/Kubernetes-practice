@@ -1,0 +1,20 @@
+apiVersion: v1
+kind: service
+metadata:
+  name: loadbalancer
+spec:
+  selector:
+    app: myapp
+  ports:
+  - protocol: TCP
+    port: 80
+    targetPort: 8080
+  clusterIP: 1.2.3.4
+  loadBalancerIP: 5.6.7.8
+  type: loadBalancer
+
+status:
+  loadBalancer:
+    ingress:
+    - ip: 9.10.11.12
+
