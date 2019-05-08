@@ -1,0 +1,456 @@
+    1  exit
+    2  curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+    3  sudo add-apt-repository    "deb [arch=amd64] https://download.docker.com/linux/ubuntu \
+    4     $(lsb_release -cs) \
+    5     stable"
+    6  curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key add -
+    7  cat << EOF | sudo tee /etc/apt/sources.list.d/kubernetes.list
+    8  deb https://apt.kubernetes.io/ kubernetes-xenial main
+    9  EOF
+   10  sudo apt-get update
+   11  sudo apt-get install -y docker-ce=18.06.1~ce~3-0~ubuntu kubelet=1.12.2-00 kubeadm=1.12.2-00 kubectl=1.12.2-00
+   12  sudo apt-mark hold docker-ce kubelet kubeadm kubectl
+   13  echo "net.bridge.bridge-nf-call-iptables=1" | sudo tee -a /etc/sysctl.conf
+   14  sudo sysctl -p
+   15  sudo kubeadm init --pod-network-cidr=10.244.0.0/16
+   16  mkdir -p $HOME/.kube
+   17  sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
+   18  sudo chown $(id -u):$(id -g) $HOME/.kube/config
+   19  kubectl get nodes
+   20  kubectl apply -f https://raw.githubusercontent.com/coreos/flannel/bc79dd1505b0c8681ece4de4c0d86c5cd2643275/Documentation/kube-flannel.yml
+   21  kubectl get nodes
+   22  kubectl get pods
+   23  kubectl get pods --all-namespaces 
+   24  kubectl get nodes
+   25  kubectl get nodes -o wide
+   26  kubectl get --help
+   27  kubectl get deploments
+   28  kubectl get deployments
+   29  kubectl get pods --all-namespaces 
+   30  kubectl get pods
+   31  kubectl get nodes
+   32  kubectl get pods --all-namespaces 
+   33  kubectl get nodes
+   34  kubectl get deploments 
+   35  kubectl get deployments 
+   36  kubectl get --help
+   37  kubectl get sc
+   38  kubectl get sc -o wide 
+   39  kubectl get nodes -o wide
+   40  kubectl get nodes -o yaml > tp.yml
+   41  ls
+   42  cat tp.yml 
+   43  kubectl get ns
+   44  cat << EOF | kubectl create -f -
+   45  kubectl get pods
+   46  kubectl get pods -o wide
+   47  kubectl describe pod nginx
+   48  kubectl get pod -o yaml >> firstpod.yml
+   49  ls
+   50  cat firstpod.yml 
+   51  kubectl get pod -o yaml
+   52  cat firstpod.yml 
+   53  kubectl describe pod nginx | grep name
+   54  kubectl describe pod nginx 
+   55  kubectl get pod rc
+   56  kubectl get rc
+   57  kubectl get deployments
+   58  vi firstdeplyment.yml
+   59  kubectl create -f firstdeplyment.yml 
+   60  vi firstdeplyment.yml
+   61  kubectl create -f firstdeplyment.yml 
+   62  kubectl get deployments
+   63  kubectl get deployments -o wide
+   64  kubectl get rc
+   65  vi firstdeplyment.yml
+   66  kubectl get rc
+   67  kubectl get deployments
+   68  kubectl describe deploment nginx-deployment
+   69  kubectl describe deployment nginx-deployment
+   70  kubectl describe deploment nginx-deployment
+   71  kubectl get deployments
+   72  kubectl get nodes
+   73  kubectl describe node saineel143c.mylabserver.com
+   74  kubectl describe node saineel143c.mylabserver.com | grep tname-over
+   75  kubectl describe node saineel143c.mylabserver.com | grep [Hh]ost
+   76  kubectl get pods --all-namespaces 
+   77  kubectl get componentstatus 
+   78  sudo apt-get install git
+   79  sudo apt autoremove
+   80  sudo apt-get install git
+   81  git clone https://github.com/saurjain108/Kubernetes-practice.git
+   82  ls
+   83  cd Kubernetes-practice/
+   84  ls
+   85  git add *
+   86  git status 
+   87  ls
+   88  cd practice/
+   89  ls
+   90  cat replicationcontroller.yml 
+   91  cd
+   92  cd Kubernetes-practice/
+   93  ls
+   94  mkdir cka
+   95  cd cka/
+   96  ls
+   97  touch firstpod.yml
+   98  vi firstpod.yml 
+   99  kubectl create -f firstpod.yml 
+  100  cd
+  101  kubectl get pods
+  102  kubectl get deployment
+  103  kubectl get deployment -o wide 
+  104  kubectl describe deployment nginx-deployment | grep [pP]od
+  105  kubectl describe deployment nginx-deployment
+  106  kubectl describe deployment nginx-deployment | grep [nN]ode
+  107  cd Kubernetes-practice/
+  108  git add *
+  109  git status 
+  110  git commit -m "adding a directory of cks"
+  111  git config --global user.email "you@example.com"
+  112  git config --global user.email "rony.jain108@gmail.com"
+  113  git config --global user.name "Raunak Jain"
+  114  git commit -m "adding a directory of cks"
+  115  git push 
+  116  cd
+  117  kubectl get componentstatus 
+  118  kubectl get pods --show;labe;s
+  119  kubectl get pods --show-labes
+  120  kubectl get pods --show-labels
+  121  kubectl get deployment --show-labels
+  122  kubectl get pods nginx env=prod
+  123  kubectl label pods nginx env=prod
+  124  kubectl get pods --show-labels
+  125  kubectl get pods -L env
+  126  kubectl get pods
+  127  kubectl describe pod nginx-deployment-5c689d88bb-rm8rp
+  128  kubectl describe pod nginx-deployment-5c689d88bb-rm8rp | grep [Ss]elect
+  129  kubectl describe pod nginx-deployment-5c689d88bb-rm8rp | grep field
+  130  kubectl describe pod nginx-deployment-5c689d88bb-rm8rp | grep label
+  131  kubectl describe pod nginx-deployment-5c689d88bb-rm8rp -o yaml
+  132  kubectl get pod nginx-deployment-5c689d88bb-rm8rp -o yaml
+  133  kubectl get pod nginx-deployment-5c689d88bb-rm8rp -o yaml | grep label
+  134  kubectl get pod nginx-deployment-5c689d88bb-rm8rp -o yaml
+  135  kubectl get pod nginx-deployment-5c689d88bb-rm8rp -o yaml | grep nnota
+  136  kubectl get deployment
+  137  kubectl get deployment nginx-deployment -o yaml
+  138  kubectl get deployments --show-labels
+  139  kubectl get deployments --field-selector
+  140  kubectl get pods --field-selector
+  141  kubectl describe pod nginx
+  142  kubectl get  pod nginx -o yaml
+  143  kubectl get  pod nginx -o yaml | grep status
+  144  kubectl get  pod nginx -o yaml | grep Running
+  145  kubectl get  pod nginx -o yaml | grep status.phase
+  146  kubectl get pods -o wide 
+  147  kubectl get services 
+  148  cd Kubernetes-practice/cka/
+  149  vi service.yml
+  150  kubectl create -f service.yml 
+  151  cat << EOF | kubectl create -f -
+  152  apiVersion: v1
+  153  kind: Pod
+  154  metadata:
+  155    name: busybox
+  156  spec:
+  157    containers:
+  158    - name: busybox
+  159      image: radial/busyboxplus:curl
+  160      args:
+  161      - sleep
+  162      - "1000"
+  163  EOF
+  164  kubectl get services
+  165  kubectl get pods 
+  166  curl localhost: 30080
+  167  curl localhost:30080
+  168  kubectl get pods -o wide
+  169  kubectl get services
+  170  kubectl get servces
+  171  kubectl get services
+  172  kubectl exec busybox -- curl 10.99.127.19
+  173  cd
+  174  ssh cloud_user@34.229.222.225
+  175  kubectl exec busybox -- curl 10.99.127.19
+  176  kubectl get node -o wide
+  177  kubectl describe nodes saineel142c.mylabserver.com
+  178  kubectl describe nodes saineel142c.mylabserver.com | grep [zZ[one
+  179  kubectl describe nodes saineel142c.mylabserver.com | grep [zZ]one
+  180  kubectl get nodes saineel142c.mylabserver.com -o yaml | grep [zZ]one
+  181  kubectl get nodes saineel142c.mylabserver.com -o yaml 
+  182  kubectl get pods
+  183  kubectl get pods busybox -o yaml | grep [zZ]one
+  184  kubectl describe pods busybox -o yaml | grep [zZ]one
+  185  kubectl describe pods busybox -o wide | grep [zZ]one
+  186  kubectl describe pod busybox -o wide | grep [zZ]one
+  187  kubectl describe pods busybox | grep [zZ]one
+  188  kubectl get nodes --show-labels
+  189  kubectl get nodes --show-labels | grep aws 
+  190  kubectl get pods -L
+  191  kubectl get pods -L app
+  192  kubectl get pods -L app -o wide
+  193  kubectl get pods --field-selector status.phase=Running
+  194  kubectl get statefulsets,services --field-selector metadata.namespace!=default
+  195  kubectl get statefulsets,services,pods --field-selector metadata.namespace!=default
+  196  kubectl get statefulsets,services,pods --field-selector metadata.namespace!=default,--field-selector status.phase=Running
+  197  kubectl get statefulsets,services,pods --field-selector metadata.namespace!=default,status.phase=Running
+  198  kubectl get statefulsets,services,pods --field-selector status.phase=Running
+  199  kubectl get services --field-selector metadata.namespace!=default
+  200  kubectl get pods --field-selector=status.phase!=Running,spec.restartPolicy=Always
+  201  kubectl get pods,deployments
+  202  echo "" | kubectl get pods,deployments
+  203  echo ""
+  204  echo "*********" | kubectl get pods,deployments
+  205  kubectl run nginx --image nginx
+  206  kubectl get pods
+  207  kubectl create deployment nginx --image nginx
+  208  kubectl get deplyments 
+  209  kubectl get deplyoments 
+  210  kubectl get deployments 
+  211  kubectl delete deployment nginx
+  212  kubectl create deployment nginx --image nginx
+  213  kubectl get deployments 
+  214  kubectl get deployment nginx - o yaml 
+  215  kubectl get deployment nginx -o yaml 
+  216  kubectl get deployment nginx -o yaml | grep [Rr]eplica
+  217  kubectl get deployments 
+  218  kubectl get deployment nginx-deployment -o yaml | grep [Rr]eplica
+  219  ls
+  220  cd Kubernetes-practice/
+  221  cd cka/
+  222  curl head http://127.0.0.1:8081
+  223  cd
+  224  kubectl get pods
+  225  kubectl get deployments
+  226  kubectl cluster-info
+  227  kubectl cluster-info dump
+  228  kubectl cluster-info dump | grep pod
+  229  cat .kube/config | more
+  230   kubectl get secrets
+  231  kubectl create ns my-ns
+  232  kubectl run test --image=chadmcrowell/kubectl-proxy -n my-ns
+  233  kubectl get pods -n my-ns
+  234  kubectl exec -it <name-of-pod> -n my-ns sh
+  235  kubectl exec -it test-6d5fb489c-7zs7v. -n my-ns sh
+  236  kubectl exec -it test-6d5fb489c-7zs7v -n my-ns sh
+  237  kubectl get pods
+  238  kubectl get deployments
+  239  kubectl get pods
+  240  kubectl port-forward nginx-first 8081:90
+  241  kubectl port-forward nginx-first 8081:80
+  242  kubectl get pods
+  243  kubectl logs nginx-first
+  244  kubectl exwc it nginx-first -- ls
+  245  kubectl exec -it nginx-first -- ls
+  246  kubectl exec -it nginx-first -- uname -a
+  247  kubectl exec -it nginx-first -- uname
+  248  kubectl get deployments
+  249  kubectl expose deployment nginx --port 80 --type NodePort expose
+  250  kubectl expose deployment nginx --port 80 --type NodePort
+  251  kubectl expose deployment ngin --port 80 --type NodePort
+  252  kubectl delete deplyment nginx
+  253  kubectl delete deployment nginx
+  254  kubectl expose deployment nginx --port 80 --type NodePort
+  255  kubectl get deplyments
+  256  kubectl get deployments
+  257  kubectl get services 
+  258  kubectl describe nodes
+  259  kubectl describe nodes | grep [cC]ondition 
+  260  kubectl describe nodes | grep Condition 
+  261  kubectl get pods -o wide 
+  262  kubectl drain nginx-first --ignore-daemonsets
+  263  kubectl drain saineel142c.mylabserver.com --ignore-daemonsets
+  264  kubectl get pods -o wide 
+  265  kubectl drain saineel143c.mylabserver.com --ignore-daemonsets
+  266  kubectl get pods
+  267  kubectl get pods -o wide
+  268  wget https://github.com/etcd-io/etcd/releases/download/v3.3.12/etcd-v3.3.12-linux-amd64.tar.gz
+  269  tar xvf etcd-v3.3.12-linux-amd64.tar.gz
+  270  sudo mv etcd-v3.3.12-linux-amd64/etcd* /usr/local/bin
+  271  sudo ETCDCTL_API=3 etcdctl snapshot save snapshot.db --cacert /etc/kubernetes/pki/etcd/server.crt --cert /etc/kubernetes/pki/etcd/ca.crt --key /etc/kubernetes/pki/etcd/ca.key
+  272  ls
+  273  cd /etc/kubernetes/pki/etcd/
+  274  ls
+  275  ll
+  276  cd
+  277  ifconfig 
+  278  kubectl get pods
+  279  kubectl get pods -o wide 
+  280  ssh saineel143c.mylabserver.com
+  281  kubectl get enspoints
+  282  kubectl get endpoints
+  283  kubectl scale deployment/
+  284  kubectl get deployments
+  285  kubectl scale deployment/nginx-deployment --replicas=3
+  286  kubectl get pods
+  287  kubectl scale deployment/nginx-deployment --replicas=30
+  288  kubectl get pods
+  289  kubectl scale deployment/nginx-deployment --replicas=3
+  290  kubectl get pods
+  291  kubectl get pods -o wide 
+  292  kubeadm --help
+  293  ls
+  294  git status 
+  295  cd Kubernetes-practice/
+  296  git add *
+  297  git status 
+  298  git commit -m" adding file service.yml"
+  299  git push
+  300  cd
+  301  ls
+  302  kubectl get ns
+  303  kubectl get namespaces 
+  304  kubectl --namespace=my-ns get pods
+  305  kubectl --namespace=default get pods
+  306  cd
+  307  kubectl --namespace=default get pods
+  308  kubectl get nodes - o wide 
+  309  kubectl get nodes -o wide 
+  310  kubectl exec -it nginx-first -- ls
+  311  ls
+  312  ssh saineel142c.mylabserver.com
+  313  cd
+  314  kubectl get pods
+  315  kubectl get pods -o yaml
+  316  kubectl get pods -o yaml | grep selector
+  317  kubectl get pods
+  318  kubectl get pod nginx-deployment-5c689d88bb-jh8jn -o yaml
+  319  kubectl get pod nginx-deployment-5c689d88bb-jh8jn -o yaml | grep selector
+  320  ls
+  321  cd Kubernetes-practice/
+  322  ls
+  323  ls | grep -R selector
+  324  ls
+  325  ls | grep *yml | grep selector
+  326  ls | grep *yml
+  327  ls | grep yml
+  328  ls | grep yml | grep -R selector
+  329  ls | grep yml | grep l
+  330  ls | grep -R selector
+  331  ls | grep -R field-selector
+  332  kubectl get pods --field-selector=Running
+  333  kubectl get pods --field-selector status.phase=Running
+  334  kubectl get services --field-selector metadata.namespace!=default
+  335  kubectl get services
+  336  kubectl get services --field-selector metadata.namespace=default
+  337  kubectl describe services nginx - o yaml | grep metadata.namespace
+  338  kubectl describe service nginx - o yaml | grep metadata.namespace
+  339  kubectl describe service nginx
+  340  kubectl describe service nginx -o widr
+  341  kubectl describe service nginx -o wide
+  342  kubectl get service nginx -o wide
+  343  kubectl get service nginx - o yaml | grep metadata.namespace
+  344  kubectl get service nginx -o yaml
+  345  kubectl get service nginx -o yaml | grep metadata.namespace
+  346  kubectl describe service nginx -o yaml | grep metadata.namespace
+  347  kubectl get statefulsets,services --field-selector metadata.namespace!=default
+  348  kubectl get statefulsets,services --field-selector metadata.namespace=default
+  349  kubectl get statefulsets
+  350  kubectl scale deployment/nginx-deployment --replicas=3
+  351  kubectl get pods
+  352  kubectl delete pod/busybox
+  353  kubectl get pods
+  354  kubectl scle -h
+  355  kubectl label -h
+  356  kubectl label -h | less
+  357  kubectl get nodes --show-labels | grep aws 
+  358  kubectl get nodes --show-labels
+  359  kubectl logs nginx-first
+  360  history | grep logs
+  361  history 
+  362  cd
+  363  kubectl get pods
+  364  kubectl logs ${POD_NAME} ${CONTAINER_NAME}
+  365  kubectl logs nginx-first
+  366  docker ps
+  367  sudo docker ps
+  368  sudo docker ps | grep nginx-first
+  369  kubectl get pods -o wide
+  370  ssh 
+  371  kubectl get pods -o wide
+  372  ssh saineel142c.mylabserver.com
+  373  ssh saineel143c.mylabserver.com
+  374  ls
+  375  history 
+  376  kubectl get pods
+  377  kubectl describe pod nginx-first
+  378  kubectl get pods
+  379  kubectl get pods -o wide
+  380  kubectl get logs nginx-first f974c048526d
+  381  kubectl logs nginx-first f974c048526d
+  382  kubectl logs nginx-first 
+  383  kubectl logs nginx f974c048526d
+  384  kubectl logs nginx-first f974c048526db5b29857318489b69954a6e49a9cebd2595afa131ae9aee2d7e5
+  385  ls
+  386  kubectl create --edit -f /tmp/srv.yaml
+  387  kubectl get nodes 
+  388  history 
+  389   kubectl drain saineel143c.mylabserver.com --ignore-daemonsets
+  390  history 
+  391  kubectl get nodes 
+  392  kubectl uncordon saineel142c.mylabserver.com
+  393  kubectl get nodes 
+  394  kubectl uncordon saineel143c.mylabserver.com
+  395  ks
+  396  ls
+  397  kubectl get nodes 
+  398  kubectl get nodes -o wide
+  399  kubectl describe node saineel142c.mylabserver.com
+  400  kubectl get nodes 
+  401  kubectl describe node saineel142c.mylabserver.com | grep [Cc}ondition 
+  402  kubectl describe node saineel142c.mylabserver.com | grep [Cc]ondition 
+  403  kubectl describe node saineel142c.mylabserver.com
+  404  cd Kubernetes-practice/
+  405  ls
+  406  cd cka/
+  407  ls
+  408  vi resource-reserver.yml
+  409  kubectl -h
+  410  kubectl apply -f resource-reserver.yml 
+  411  kubectl get pods
+  412  kubectl describe pod resource-reserver
+  413  kubectl exec -it test-6d5fb489c-7zs7v -n my-ns sh
+  414  cd
+  415  cd Kubernetes-practice/
+  416  git add *
+  417  git status 
+  418  git commit -m " adding a pod file for specific RAM and CPU"
+  419  git push 
+  420  cd
+  421  kubectl decribe node 
+  422  kubectl decribe node saineel142c.mylabserver.com
+  423  kubectl describe node saineel142c.mylabserver.com
+  424  echo "********************************************************************"
+  425  kubectl describe node saineel142c.mylabserver.com
+  426  kubectl describe node saineel142c.mylabserver.com| grep [Pp]eriod
+  427  kubectl list
+  428  cd Kubernetes-practice/cka/
+  429  ls
+  430  hostname
+  431  cd
+  432  kubectl get pods
+  433  kubectl describe pod nginx | grep [hH]ook
+  434  kubectl describe pod nginx
+  435  cd Kubernetes-practice/cka/
+  436  ls
+  437  mkdir pod_overview
+  438  ls
+  439  rm pod_overview/
+  440  rm -rf pod_overview/
+  441  mkdir pods
+  442  ls
+  443  cd Kubernetes-practice/cka/pods/
+  444  ls
+  445  vi firstpod.yml
+  446  kubectl apply -f firstpod.yml 
+  447  kubectl get pods
+  448  vi firstpod.yml
+  449  kubectl apply -f firstpod.yml 
+  450  vi firstpod.yml
+  451  kubectl apply -f firstpod.yml 
+  452  kubectl get pods
+  453  kubectl delete pod myapp-pod
+  454  kubectl apply -f firstpod.yml 
+  455  kubectl get pods
+  456  history > Kubernetes-practice/practice/5_8_commands.txt
