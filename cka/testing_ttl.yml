@@ -1,0 +1,15 @@
+#code copied from https://v1-12.docs.kubernetes.io/docs/concepts/workloads/controllers/jobs-run-to-completion/#clean-up-finished-jobs-automatically for study 
+
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: for-ttl
+spec:
+  ttlSecondsAfterFinished: 100
+  template:
+    spec:
+      containers:
+      - name: pi
+        image: perl
+        command: ["perl",  "-Mbignum=bpi", "-wle", "print bpi(2000)"]
+      restartPolicy: Never
