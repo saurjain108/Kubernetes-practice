@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: my-nginx1
+#below spec is for deplyment
+spec:
+  selector:
+    matchLabels:
+      run: my-app-running
+  replicas: 2 
+  template:
+    metadata:
+      labels:
+        run: my-app-running
+#the spec is for the containers in Pod 
+    spec:
+      containers:
+      - name: my-nginx1
+        image: nginx
+        ports:
+        - containerPort: 80
