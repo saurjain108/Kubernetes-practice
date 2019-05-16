@@ -1,0 +1,33 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: busybox-1
+spec:
+  containers:
+  - name: busybox-cnt-1
+    image: busybox
+    resources:
+      requests:
+        memory: "100Mi"
+        cpu: "100m"
+      limits:
+        memory: "200Mi"
+        cpu: "500m"
+######
+  - name: busybox-cnt-2
+    image: busybox
+    resources:
+      requests:
+        memory: "100Mi"
+        cpu: "100m"
+ ######
+  - name: busybox-cnt-3
+    image: busybox
+    resources:
+      limits:
+        memory: "200Mi"
+        cpu: "500m"
+######
+  - name: busybox-cnt-4
+    image: busybox
+

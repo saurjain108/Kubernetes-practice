@@ -1834,3 +1834,1003 @@
  3241  ls
  3242  cat commands.txt 
  3243  history >> commands.txt 
+ 3937  kubectl get deployments 
+ 3938  kubectl get deployment nginx-deployment -o yaml | grep [Rr]eplica
+ 3939  ls
+ 3940  cd Kubernetes-practice/
+ 3941  cd cka/
+ 3942  curl head http://127.0.0.1:8081
+ 3943  cd
+ 3944  kubectl get pods
+ 3945  kubectl get deployments
+ 3946  kubectl cluster-info
+ 3947  kubectl cluster-info dump
+ 3948  kubectl cluster-info dump | grep pod
+ 3949  cat .kube/config | more
+ 3950   kubectl get secrets
+ 3951  kubectl create ns my-ns
+ 3952  kubectl run test --image=chadmcrowell/kubectl-proxy -n my-ns
+ 3953  kubectl get pods -n my-ns
+ 3954  kubectl exec -it <name-of-pod> -n my-ns sh
+ 3955  kubectl exec -it test-6d5fb489c-7zs7v. -n my-ns sh
+ 3956  kubectl exec -it test-6d5fb489c-7zs7v -n my-ns sh
+ 3957  kubectl get pods
+ 3958  kubectl get deployments
+ 3959  kubectl get pods
+ 3960  kubectl port-forward nginx-first 8081:90
+ 3961  kubectl port-forward nginx-first 8081:80
+ 3962  kubectl get pods
+ 3963  kubectl logs nginx-first
+ 3964  kubectl exwc it nginx-first -- ls
+ 3965  kubectl exec -it nginx-first -- ls
+ 3966  kubectl exec -it nginx-first -- uname -a
+ 3967  kubectl exec -it nginx-first -- uname
+ 3968  kubectl get deployments
+ 3969  kubectl expose deployment nginx --port 80 --type NodePort expose
+ 3970  kubectl expose deployment nginx --port 80 --type NodePort
+ 3971  kubectl expose deployment ngin --port 80 --type NodePort
+ 3972  kubectl delete deplyment nginx
+ 3973  kubectl delete deployment nginx
+ 3974  kubectl expose deployment nginx --port 80 --type NodePort
+ 3975  kubectl get deplyments
+ 3976  kubectl get deployments
+ 3977  kubectl get services 
+ 3978  kubectl describe nodes
+ 3979  kubectl describe nodes | grep [cC]ondition 
+ 3980  kubectl describe nodes | grep Condition 
+ 3981  kubectl get pods -o wide 
+ 3982  kubectl drain nginx-first --ignore-daemonsets
+ 3983  kubectl drain saineel142c.mylabserver.com --ignore-daemonsets
+ 3984  kubectl get pods -o wide 
+ 3985  kubectl drain saineel143c.mylabserver.com --ignore-daemonsets
+ 3986  kubectl get pods
+ 3987  kubectl get pods -o wide
+ 3988  wget https://github.com/etcd-io/etcd/releases/download/v3.3.12/etcd-v3.3.12-linux-amd64.tar.gz
+ 3989  tar xvf etcd-v3.3.12-linux-amd64.tar.gz
+ 3990  sudo mv etcd-v3.3.12-linux-amd64/etcd* /usr/local/bin
+ 3991  sudo ETCDCTL_API=3 etcdctl snapshot save snapshot.db --cacert /etc/kubernetes/pki/etcd/server.crt --cert /etc/kubernetes/pki/etcd/ca.crt --key /etc/kubernetes/pki/etcd/ca.key
+ 3992  ls
+ 3993  cd /etc/kubernetes/pki/etcd/
+ 3994  ls
+ 3995  ll
+ 3996  cd
+ 3997  ifconfig 
+ 3998  kubectl get pods
+ 3999  kubectl get pods -o wide 
+ 4000  ssh saineel143c.mylabserver.com
+ 4001  kubectl get enspoints
+ 4002  kubectl get endpoints
+ 4003  kubectl scale deployment/
+ 4004  kubectl get deployments
+ 4005  kubectl scale deployment/nginx-deployment --replicas=3
+ 4006  kubectl get pods
+ 4007  kubectl scale deployment/nginx-deployment --replicas=30
+ 4008  kubectl get pods
+ 4009  kubectl scale deployment/nginx-deployment --replicas=3
+ 4010  kubectl get pods
+ 4011  kubectl get pods -o wide 
+ 4012  kubeadm --help
+ 4013  ls
+ 4014  git status 
+ 4015  cd Kubernetes-practice/
+ 4016  git add *
+ 4017  git status 
+ 4018  git commit -m" adding file service.yml"
+ 4019  git push
+ 4020  cd
+ 4021  ls
+ 4022  kubectl get ns
+ 4023  kubectl get namespaces 
+ 4024  kubectl --namespace=my-ns get pods
+ 4025  kubectl --namespace=default get pods
+ 4026  cd
+ 4027  kubectl --namespace=default get pods
+ 4028  kubectl get nodes - o wide 
+ 4029  kubectl get nodes -o wide 
+ 4030  kubectl exec -it nginx-first -- ls
+ 4031  ls
+ 4032  ssh saineel142c.mylabserver.com
+ 4033  cd
+ 4034  kubectl get pods
+ 4035  kubectl get pods -o yaml
+ 4036  kubectl get pods -o yaml | grep selector
+ 4037  kubectl get pods
+ 4038  kubectl get pod nginx-deployment-5c689d88bb-jh8jn -o yaml
+ 4039  kubectl get pod nginx-deployment-5c689d88bb-jh8jn -o yaml | grep selector
+ 4040  ls
+ 4041  cd Kubernetes-practice/
+ 4042  ls
+ 4043  ls | grep -R selector
+ 4044  ls
+ 4045  ls | grep *yml | grep selector
+ 4046  ls | grep *yml
+ 4047  ls | grep yml
+ 4048  ls | grep yml | grep -R selector
+ 4049  ls | grep yml | grep l
+ 4050  ls | grep -R selector
+ 4051  ls | grep -R field-selector
+ 4052  kubectl get pods --field-selector=Running
+ 4053  kubectl get pods --field-selector status.phase=Running
+ 4054  kubectl get services --field-selector metadata.namespace!=default
+ 4055  kubectl get services
+ 4056  kubectl get services --field-selector metadata.namespace=default
+ 4057  kubectl describe services nginx - o yaml | grep metadata.namespace
+ 4058  kubectl describe service nginx - o yaml | grep metadata.namespace
+ 4059  kubectl describe service nginx
+ 4060  kubectl describe service nginx -o widr
+ 4061  kubectl describe service nginx -o wide
+ 4062  kubectl get service nginx -o wide
+ 4063  kubectl get service nginx - o yaml | grep metadata.namespace
+ 4064  kubectl get service nginx -o yaml
+ 4065  kubectl get service nginx -o yaml | grep metadata.namespace
+ 4066  kubectl describe service nginx -o yaml | grep metadata.namespace
+ 4067  kubectl get statefulsets,services --field-selector metadata.namespace!=default
+ 4068  kubectl get statefulsets,services --field-selector metadata.namespace=default
+ 4069  kubectl get statefulsets
+ 4070  kubectl scale deployment/nginx-deployment --replicas=3
+ 4071  kubectl get pods
+ 4072  kubectl delete pod/busybox
+ 4073  kubectl get pods
+ 4074  kubectl scle -h
+ 4075  kubectl label -h
+ 4076  kubectl label -h | less
+ 4077  kubectl get nodes --show-labels | grep aws 
+ 4078  kubectl get nodes --show-labels
+ 4079  kubectl logs nginx-first
+ 4080  history | grep logs
+ 4081  history 
+ 4082  cd
+ 4083  kubectl get pods
+ 4084  kubectl logs ${POD_NAME} ${CONTAINER_NAME}
+ 4085  kubectl logs nginx-first
+ 4086  docker ps
+ 4087  sudo docker ps
+ 4088  sudo docker ps | grep nginx-first
+ 4089  kubectl get pods -o wide
+ 4090  ssh 
+ 4091  kubectl get pods -o wide
+ 4092  ssh saineel142c.mylabserver.com
+ 4093  ssh saineel143c.mylabserver.com
+ 4094  ls
+ 4095  history 
+ 4096  kubectl get pods
+ 4097  kubectl describe pod nginx-first
+ 4098  kubectl get pods
+ 4099  kubectl get pods -o wide
+ 4100  kubectl get logs nginx-first f974c048526d
+ 4101  kubectl logs nginx-first f974c048526d
+ 4102  kubectl logs nginx-first 
+ 4103  kubectl logs nginx f974c048526d
+ 4104  kubectl logs nginx-first f974c048526db5b29857318489b69954a6e49a9cebd2595afa131ae9aee2d7e5
+ 4105  ls
+ 4106  kubectl create --edit -f /tmp/srv.yaml
+ 4107  kubectl get nodes 
+ 4108  history 
+ 4109   kubectl drain saineel143c.mylabserver.com --ignore-daemonsets
+ 4110  history 
+ 4111  kubectl get nodes 
+ 4112  kubectl uncordon saineel142c.mylabserver.com
+ 4113  kubectl get nodes 
+ 4114  kubectl uncordon saineel143c.mylabserver.com
+ 4115  ks
+ 4116  ls
+ 4117  kubectl get nodes 
+ 4118  kubectl get nodes -o wide
+ 4119  kubectl describe node saineel142c.mylabserver.com
+ 4120  kubectl get nodes 
+ 4121  kubectl describe node saineel142c.mylabserver.com | grep [Cc}ondition 
+ 4122  kubectl describe node saineel142c.mylabserver.com | grep [Cc]ondition 
+ 4123  kubectl describe node saineel142c.mylabserver.com
+ 4124  cd Kubernetes-practice/
+ 4125  ls
+ 4126  cd cka/
+ 4127  ls
+ 4128  vi resource-reserver.yml
+ 4129  kubectl -h
+ 4130  kubectl apply -f resource-reserver.yml 
+ 4131  kubectl get pods
+ 4132  kubectl describe pod resource-reserver
+ 4133  kubectl exec -it test-6d5fb489c-7zs7v -n my-ns sh
+ 4134  cd
+ 4135  cd Kubernetes-practice/
+ 4136  git add *
+ 4137  git status 
+ 4138  git commit -m " adding a pod file for specific RAM and CPU"
+ 4139  git push 
+ 4140  cd
+ 4141  kubectl decribe node 
+ 4142  kubectl decribe node saineel142c.mylabserver.com
+ 4143  kubectl describe node saineel142c.mylabserver.com
+ 4144  echo "********************************************************************"
+ 4145  kubectl describe node saineel142c.mylabserver.com
+ 4146  kubectl describe node saineel142c.mylabserver.com| grep [Pp]eriod
+ 4147  kubectl list
+ 4148  cd Kubernetes-practice/cka/
+ 4149  ls
+ 4150  hostname
+ 4151  cd
+ 4152  kubectl get pods
+ 4153  kubectl describe pod nginx | grep [hH]ook
+ 4154  kubectl describe pod nginx
+ 4155  cd Kubernetes-practice/cka/
+ 4156  ls
+ 4157  mkdir pod_overview
+ 4158  ls
+ 4159  rm pod_overview/
+ 4160  rm -rf pod_overview/
+ 4161  mkdir pods
+ 4162  ls
+ 4163  cd Kubernetes-practice/cka/pods/
+ 4164  ls
+ 4165  vi firstpod.yml
+ 4166  kubectl apply -f firstpod.yml 
+ 4167  kubectl get pods
+ 4168  vi firstpod.yml
+ 4169  kubectl apply -f firstpod.yml 
+ 4170  vi firstpod.yml
+ 4171  kubectl apply -f firstpod.yml 
+ 4172  kubectl get pods
+ 4173  kubectl delete pod myapp-pod
+ 4174  kubectl apply -f firstpod.yml 
+ 4175  kubectl get pods
+ 4176  history > Kubernetes-practice/practice/5_8_commands.txt
+ 4177  cd Kubernetes-practice/
+ 4178  ls
+ 4179  cd cka/
+ 4180  cd ..
+ 4181  cp practice/5_8_commands.txt ./cka/commands_5_8.txt
+ 4182  cd ..
+ 4183  cd Kubernetes-practice/cka/
+ 4184  ls
+ 4185  cat commands_5_8.txt 
+ 4186  ls
+ 4187  .
+ 4188  >
+ 4189  vi adns.yml
+ 4190  kubectl apply -f adns.yml 
+ 4191  kubectl get pods
+ 4192  kubectl delete -f adns.yml 
+ 4193  kubectl get pods
+ 4194  kubectl describe pod nginx
+ 4195  kubectl describe pod nginx | grep start
+ 4196  vi spedifyinginitcontainer.yml
+ 4197  mv spedifyinginitcontainer.yml specifyinginitcontainer.yml
+ 4198  ls
+ 4199  vi specifyinginitcontainer.yml 
+ 4200  kubectl create -f specifyinginitcontainer.yml 
+ 4201  kubectl get -f specifyinginitcontainer.yml 
+ 4202  kubectl describe -f specifyinginitcontainer.yml 
+ 4203  kubectl describe -f specifyinginitcontainer.yml | less
+ 4204  kubectl get pods 
+ 4205  docker ps
+ 4206  sudo docker ps
+ 4207  ls
+ 4208  mkdir controllers
+ 4209  cd controllers/
+ 4210  ls ./
+ 4211  cd ..
+ 4212  ls
+ 4213  cd controllers/
+ 4214  vi firstreplicaset.yml
+ 4215  kubectl create -f firstreplicaset.yml 
+ 4216  vi firstreplicaset.yml
+ 4217  kubectl create -f firstreplicaset.yml 
+ 4218  kubectl get -f firstreplicaset.yml 
+ 4219  kubectl describe -f firstreplicaset.yml 
+ 4220  kubectl get pods 
+ 4221  cat firstreplicaset.yml 
+ 4222  cd Kubernetes-practice/cka/controllers/
+ 4223  cat firstreplicaset.yml 
+ 4224  kubectl get rs
+ 4225  kubectl get rc
+ 4226  vi firstreplicationcontroller.yml
+ 4227  cat re
+ 4228  cat firstreplicationcontroller.yml 
+ 4229  cat firstreplicaset.yml 
+ 4230  kubectl apply -f firstreplicationcontroller.yml 
+ 4231  vi firstreplicationcontroller.yml
+ 4232  kubectl apply -f firstreplicationcontroller.yml 
+ 4233  get  apply -f firstreplicationcontroller.yml 
+ 4234  kubectl get -f firstreplicationcontroller.yml 
+ 4235  kubectl describe -f firstreplicationcontroller.yml 
+ 4236  kubectl get pods 
+ 4237  kubectl get nodes 
+ 4238  kubectl describe pod nginx-1-pm6cp
+ 4239  vi firstreplicationcontroller.yml
+ 4240  kubectl describie rc/nginx-1
+ 4241  kubectl describe rc/nginx-1
+ 4242  vi firstreplicationcontroller.yml
+ 4243  get  delete -f firstreplicationcontroller.yml 
+ 4244  kubectl delete -f firstreplicationcontroller.yml 
+ 4245  ls
+ 4246  vi firstreplicationcontroller.yml 
+ 4247  kubectl apply -f firstreplicationcontroller.yml 
+ 4248  kubectl describe rc/nginx
+ 4249  vi firstreplicationcontroller_2.yml 
+ 4250  la
+ 4251  vi firstreplicationcontroller_2.yml 
+ 4252  kubectl apply -f firstreplicationcontroller_2.yml 
+ 4253  vi firstreplicationcontroller_2.yml 
+ 4254  kubectl apply -f firstreplicationcontroller_2.yml 
+ 4255  kubectl describe rc/nginx-1
+ 4256  cat firstreplicationcontroller.yml 
+ 4257  car firstreplicationcontroller.yml > firstreplicationcontroller_test.yml
+ 4258  cat firstreplicationcontroller.yml > firstreplicationcontroller_test.yml
+ 4259  ls
+ 4260  car firstreplicationcontroller_test.yml 
+ 4261  vi  firstreplicationcontroller_test.yml 
+ 4262  kubectl apply -f firstreplicationcontroller_test.yml 
+ 4263  vi  firstreplicationcontroller_test.yml 
+ 4264  rm firstreplicationcontroller_test.yml 
+ 4265  kubectl get pods 
+ 4266  kubectl describe pod nginx
+ 4267  kubectl get pods -h
+ 4268  kubectl get pods -h | grep [nN]ode
+ 4269  kubectl get pods -h | less
+ 4270  kubectl get pods --field-selector Node=saineel142c.mylabserver.com
+ 4271  cat firstreplicaset.yml 
+ 4272  vi firstdeployment.yml
+ 4273  cd ..
+ 4274  cd..
+ 4275  cd ..
+ 4276  git add *
+ 4277  git staut
+ 4278  git status 
+ 4279  git commit -m "adding folder pod and controllers along with some sample yaml code from K8's hoomepage used for practice'
+ 4280  git commit -m "adding folder pod and controllers along with some sample yaml code from K8's hoomepage used for practice"
+ 4281  git push 
+ 4282  cd cka/controllers/
+ 4283  ls
+ 4284  vi firstdeployment.yml 
+ 4285  kubectl apply -f firstdeployment.yml 
+ 4286  vi firstdeployment.yml 
+ 4287  kubectl apply -f firstdeployment.yml 
+ 4288  kubectl get deployments
+ 4289  kubectl delete deployment nginx-deployment
+ 4290  kubectl get deployments
+ 4291  kubectl apply -f firstdeployment.yml 
+ 4292  vi firstdeployment.yml 
+ 4293  kubectl apply -f firstdeployment.yml 
+ 4294  kubectl get -f firstdeployment.yml 
+ 4295  kubectl describe -f firstdeployment.yml 
+ 4296  kubectl get pods --show-labels
+ 4297  kubectl get deployments
+ 4298  kubectl rollout status deployment.v1.apps/nginx-deployment
+ 4299  kubectl get rs
+ 4300  kubectl -h
+ 4301  kubectl -h | grep set 
+ 4302  kubectl set -h | grep image 
+ 4303  vi firstdeployment.yml 
+ 4304  kubectl edit deployment.v1.apps/nginx-deployment
+ 4305  kubectl rollout status deployment.v1.apps/nginx-deployment
+ 4306  kubectl describe deployment nginx-deployment
+ 4307  kubectl het pods
+ 4308  kubectl get pods
+ 4309  kubectl get deployment
+ 4310  kubectl get rs
+ 4311  kubectl edit deployment.v1.apps/nginx-deployment
+ 4312  kubectl rollout status deployment.v1.apps/nginx-deployment
+ 4313  kubectl get rs
+ 4314  kubectl get deployment
+ 4315  kubectl get pods
+ 4316  kubectl describe deployment nginx-deployment
+ 4317  kubectl get rollouts
+ 4318  kubectl get rollout
+ 4319  kubectl rollout -h
+ 4320  kubectl rollout history
+ 4321  kubectl rollout history deployment.v1.apps/nginx-deployment
+ 4322  kubectl get rs
+ 4323  kubectl get pods --showlabels
+ 4324  kubectl get rs
+ 4325  kubectl get pods --showlabel
+ 4326  kubectl get rs
+ 4327  kubectl get pods --show labels
+ 4328  kubectl get pods --show-labels
+ 4329  kubectl get rs
+ 4330  kubectl get pods --show-labels
+ 4331  history 
+ 4332  history >> ../commands_5_8.txt 
+ 4333  cat ../commands_5_8.txt 
+ 4334  kubectl describe deployment nginx-deployment
+ 4335  kubectl rollout history deployment.v1.apps/nginx-deployment
+ 4336  kubectl rollout undo deployment.v1.apps/nginx-deployment --to-revision=2
+ 4337  kubectl rollout history deployment.v1.apps/nginx-deployment
+ 4338  kubectl get rs
+ 4339  kubectl get pods --show-labels
+ 4340  kubectl get rs
+ 4341  kubectl describe deployment nginx-deployment
+ 4342  kubectl get deployment nginx-deployment
+ 4343  kubectl get deploy
+ 4344  kubectl scale deployment/nginx-deployment --replicas=10
+ 4345  kubectl get deploy
+ 4346  kubectl get rs
+ 4347  kubectl get pods
+ 4348  kubectl autoscale deployment/nginx-deployment --min=10 --max=15 --cpu-percent=80
+ 4349  kubectl get pods
+ 4350  kubectl describe deployment nginx-deployment
+ 4351  kubectl autoscale deployment/nginx-deployment --min=10 --max=15 --cpu-percent=80
+ 4352  kubectl get deploy
+ 4353  kubectl get rs
+ 4354  history >> ../commands_5_8.txt 
+ 4355  cd ..
+ 4356  git add 
+ 4357  git add *
+ 4358  git status 
+ 4359  kubectl rollout history deployment.v1.apps/nginx-deployment
+ 4360  kubectl rollout history deployment.v1.apps/nginx-deployments "nginx-deploymeny"
+ 4361  kubectl rollout history deployment.v1.apps/nginx-deployment
+ 4362  kubectl annotate deployment.v1.apps/nginx-deployment kubernetes.io/change-cause="image updated to 1.9.1"
+ 4363  kubectl rollout history deployment.v1.apps/nginx-deployment
+ 4364  history 
+ 4365  cd Kubernetes-practice/cka/controllers/cd
+ 4366  ls
+ 4367  git clone https://github.com/saurjain108/ansible.git
+ 4368  ls
+ 4369  cd ansible/
+ 4370  ls
+ 4371  ll
+ 4372  ls
+ 4373  ls playbooks/
+ 4374  ls
+ 4375  mkdir course
+ 4376  cd course/
+ 4377  cd ..
+ 4378  git status 
+ 4379  cd course/
+ 4380  touch abc.txt
+ 4381  cd ..
+ 4382  git status 
+ 4383  git commit -m "testing"
+ 4384  ls
+ 4385  mv abc.txt course/
+ 4386  ls
+ 4387  git status 
+ 4388  git add *
+ 4389  git status 
+ 4390  git commit -m "testing"
+ 4391  git push 
+ 4392  cd Kubernetes-practice/cka/controllers/
+ 4393  ls
+ 4394  vi firststatefulset.yml
+ 4395  kubectl apply -f firststatefulset.yml
+ 4396  vi firststatefulset.yml
+ 4397  kubectl apply -f firststatefulset.yml
+ 4398  vi firststatefulset.yml
+ 4399  kubectl apply -f firststatefulset.yml
+ 4400  vi firststatefulset.yml
+ 4401  kubectl apply -f firststatefulset.yml
+ 4402  kubectl get pods
+ 4403  kubectl autoscale deployment/nginx-deployment --min=4 --max=15 --cpu-percent=80
+ 4404  kubectl get pods
+ 4405  vi firststatefulset-2.yml
+ 4406  kubectl apply -f firststatefulset-2.yml
+ 4407  vi firststatefulset-2.yml
+ 4408  kubectl apply -f firststatefulset-2.yml
+ 4409  vi firststatefulset-2.yml
+ 4410  kubectl apply -f firststatefulset-2.yml
+ 4411  kubectl get ss
+ 4412  kubectl get statefulset
+ 4413  kubectl get pods
+ 4414  kubectl delete -f firststatefulset-2.yml
+ 4415  kubectl get -h
+ 4416  kubectl get -h | [vV]olune
+ 4417  kubectl get -h | [vV]olume
+ 4418  kubectl get -h | grep [vV]olume
+ 4419  kubectl get -h | less
+ 4420  kubectl get persistanrvolumes
+ 4421  kubectl get persistanrvolume
+ 4422  kubectl get persistantvolumes
+ 4423  kubectl get pv
+ 4424  kubectl get volumes
+ 4425  vi firstdaemonset.yml
+ 4426  kubectl apply -f firstdaemonset.yml
+ 4427  kubectl get ds
+ 4428  kubectl get daemonset
+ 4429  kubectl get pods
+ 4430  kubectl get daemonsets
+ 4431  kubectl apply -f firstdaemonset.yml
+ 4432  kubectl get ns
+ 4433  kubectl get services
+ 4434  kubectl get deployment --show-labels
+ 4435  kubectl get nodes 
+ 4436  kubectl get nodes  -o wide 
+ 4437  kubectl describe nodes 
+ 4438  kubectl get nodes 
+ 4439  kubectl describe node saineel142c.mylabserver.com | less
+ 4440  kubectl describe node saineel143c.mylabserver.com | less
+ 4441  kubectl get jobs
+ 4442  vi testing_ttl.yml
+ 4443  kubectl apply -f testing_ttl.yml
+ 4444  vi testing_ttl.yml
+ 4445  kubectl apply -f testing_ttl.yml
+ 4446  kubectl get jobs
+ 4447  ls
+ 4448  mv testing_ttl.yml ../
+ 4449  ls
+ 4450  kubectl describe job for-ttl
+ 4451  cd .., cd ..
+ 4452  cd ..
+ 4453  git add 8
+ 4454  git add *
+ 4455  git status 
+ 4456  git commit -m "Adding daemon,deployment,stateful and ttl files and also updated commands"
+ 4457  git push 
+ 4458  kubectl get pods
+ 4459  kubectl get jobs
+ 4460  kubectl delete -f testing_ttl.yml
+ 4461  cd cka/
+ 4462  ls
+ 4463  cd cka/
+ 4464  kubectl delete -f testing_ttl.yml
+ 4465  kubectl get pods
+ 4466  kubectl get deply
+ 4467  kubectl get deploy
+ 4468  kubectl delele pod nginx-deployment-6cb79996b5-2sh4q nginx-deployment-6cb79996b5-4wtbm
+ 4469  kubectl delete pod nginx-deployment-6cb79996b5-2sh4q nginx-deployment-6cb79996b5-4wtbm
+ 4470  kubectl get pods
+ 4471  cd controllers/
+ 4472  ls
+ 4473  cd ..
+ 4474  kubectl apply -f testing_ttl.yml
+ 4475  kubectl get pods
+ 4476  kubectl logs for-ttl-pddxl
+ 4477  cat testing_ttl.yml 
+ 4478  vi checking-activedeadlinesecondandbackofflimit.yml
+ 4479  kubectl apply -f checking-activedeadlinesecondandbackofflimit.yml
+ 4480  kubectl get pods
+ 4481  ls
+ 4482  mv checking-activedeadlinesecondandbackofflimit.yml controllers/
+ 4483  cat testing_ttl.yml 
+ 4484  cd ..
+ 4485  git status 
+ 4486  git add *
+ 4487  git commit -m "adding activedeadlinesecondandbackofflimit file"
+ 4488  git push 
+ 4489  mkdir "services,load-balancers and networking"
+ 4490  ls
+ 4491  rm -rf "services,load-balancers and networking"
+ 4492  mkdir 'services,load-balancers and networking'
+ 4493  lls
+ 4494  ls
+ 4495  cd services\,load-balancers\ and\ networking/
+ 4496  ls
+ 4497  vi firstservice.yml
+ 4498  kubectl get services
+ 4499  kubectl apply -f firstservice.yml
+ 4500  vi firstservice.yml
+ 4501  kubectl apply -f firstservice.yml
+ 4502  vi firstservice.yml
+ 4503  kubectl apply -f firstservice.yml
+ 4504  vi firstservice.yml
+ 4505  kubectl apply -f firstservice.yml
+ 4506  vi firstservice.yml
+ 4507  kubectl get services
+ 4508  kubectl get services 
+ 4509  kubectl describe service my-service
+ 4510  vi servicewithoutselector.yml
+ 4511  kubectl apply -f servicewithoutselector.yml 
+ 4512  vi servicewithoutselector.yml
+ 4513  kubectl apply -f servicewithoutselector.yml 
+ 4514  vi servicewithoutselector.yml
+ 4515  kubectl apply -f servicewithoutselector.yml 
+ 4516  kubectl get services
+ 4517  kubectl get endpoints
+ 4518  vi firstservice.yml
+ 4519  vi multiportservice.yml
+ 4520  vi firstservice.yml
+ 4521  vi multiportservice.yml
+ 4522  kubectl apply -f multiportservice.yml 
+ 4523  vi multiportservice.yml
+ 4524  kubectl apply -f multiportservice.yml 
+ 4525  kubectl get services
+ 4526  kubectl describe service multiport-service
+ 4527  vi multiportservice.yml
+ 4528  vi firstservice.yml
+ 4529  kubectl apply -f firstservice.yml
+ 4530  cd ..
+ 4531  ls | grep -R IP
+ 4532  vi cd cka/
+ 4533  cd cka/
+ 4534  ls | grep -R IP
+ 4535  vi firstservice.yml
+ 4536  cd ..
+ 4537  ls
+ 4538  mv services\,load-balancers\ and\ networking/ cka/
+ 4539  ls
+ 4540  cd cka/
+ 4541  ls
+ 4542  ls | grep -R IP
+ 4543  kubectl apply -f firstservice.yml
+ 4544  cd services\,load-balancers\ and\ networking/
+ 4545  kubectl apply -f firstservice.yml
+ 4546  vi firstservice.yml
+ 4547  kubectl apply -f firstservice.yml
+ 4548  vi firstservice.yml
+ 4549  kubectl apply -f firstservice.yml
+ 4550  vi firstservice.yml
+ 4551  kubectl get pods
+ 4552  vi firstservice.yml
+ 4553  kubectl apply -f firstservice.yml
+ 4554  vi firstservice.yml
+ 4555  kubectl get pods
+ 4556  kubectl describe pod nginx
+ 4557  kubectl describe pod nginx | grep [hH]ost
+ 4558  cd Kubernetes-practice/cka/services\,load-balancers\ and\ networking/
+ 4559  vi exposingpodtocluster.yml
+ 4560  kubectl apply -f exposingpodtocluster.yml
+ 4561  vi exposingpodtocluster.yml
+ 4562  kubectl apply -f exposingpodtocluster.yml
+ 4563  kubectl get pods
+ 4564  kubectl get pods --match-label run==my-app-running
+ 4565  kubectl get deployments --show-labels
+ 4566  vi exposingpodtocluster.yml
+ 4567  kubectl get pods -l run=my-app-running -o wide
+ 4568  kubectl get pods -l run=my-app-running - o yaml | grep podID
+ 4569  kubectl get pods -l run=my-app-running -o yaml | grep podID
+ 4570  kubectl get pods -l run=my-app-running -o yaml
+ 4571  kubectl get pods -l run=my-app-running -o yaml | grep pod
+ 4572  curl 172.31.97.179
+ 4573  ssh 172.31.97.179
+ 4574  kubectl get services kube-dns --namespace=kube-system
+ 4575  kubectl run curl --image=radial/busyboxplus:curl -i --tty
+ 4576  make keys secret make keys secret KEY=/tmp/nginx.key CERT=/tmp/nginx.crt SECRET=/tmp/secret.json
+ 4577  cd ..
+ 4578  git status 
+ 4579  git add *
+ 4580  git status 
+ 4581  git commit -m " adding service multiport service and servicewithoutselector files"
+ 4582  git push 
+ 4583  cd cka/services\,load-balancers\ and\ networking/
+ 4584  vi firstingress.yml
+ 4585  kubectl apply -f firstingress.yml
+ 4586  kubectl get ingrss
+ 4587  kubectl get ingress
+ 4588  vi singleserviceingress.yml
+ 4589  kubectl apply -f singleserviceingress.yml 
+ 4590  kubectl describe -f singleserviceingress.yml 
+ 4591  kubectl get ingress
+ 4592  cd Kubernetes-practice/cka/services\,load-balancers\ and\ networking/
+ 4593  kubectl get ingress
+ 4594  su 
+ 4595  cd
+ 4596  ls
+ 4597  git clone https://github.com/saurjain108/linux-.git
+ 4598  ls
+ 4599  cd ansible/
+ 4600  ls
+ 4601  vi README.md 
+ 4602  cd
+ 4603  cd ansible/
+ 4604  ls
+ 4605  cat command-10-9.txt 
+ 4606   ls
+ 4607  -m ping
+ 4608  ping 8.8.8.8
+ 4609  cd Kubernetes-practice/cka/services\,load-balancers\ and\ networking/
+ 4610  ls
+ 4611  cd ..
+ 4612  ls
+ 4613  ca adns.yml 
+ 4614  cat adns.yml 
+ 4615  ls
+ 4616  cat resource-reserver.yml 
+ 4617  ls
+ 4618  cat service
+ 4619  cat service.yml 
+ 4620  cat firstpod.yml 
+ 4621  cat specifyinginitcontainer.yml 
+ 4622  ls
+ 4623  cd controllers/
+ 4624  l
+ 4625  vi firstdaemonset.yml 
+ 4626  vi firstdeployment.yml 
+ 4627  vi firstreplicaset.yml 
+ 4628  vi firstreplicationcontroller.yml 
+ 4629  vi firststatefulset.yml 
+ 4630  cd ..
+ 4631  ls
+ 4632  mkdir storage
+ 4633  cd storage/ls
+ 4634  cd storag
+ 4635  cd storaga
+ 4636  cd storage/
+ 4637  ls
+ 4638  echo $ENV
+ 4639  ENV
+ 4640  $ENV
+ 4641  env
+ 4642  cd Kubernetes-practice/cka/storage/
+ 4643  ls
+ 4644  vi firstpv.yml
+ 4645  kubectl apply -f firstpv.yml
+ 4646  vi firstpv.yml
+ 4647  kubectl apply -f firstpv.yml
+ 4648  kubectl get pv
+ 4649  kubectl get pdos
+ 4650  kubectl get pods
+ 4651  kubectl describe pv/pv1
+ 4652  kubectl get pv -o widw
+ 4653  kubectl get pv -o wide
+ 4654  vi firstpvc.yml
+ 4655  kubectl apply -f firstpvc.yml
+ 4656  vi claimasvolume.yml
+ 4657  su -
+ 4658  kubectl -f  claimasvolume.yml
+ 4659  kubectl -f claimasvolume.yml
+ 4660  kubectl apply -f claimasvolume.yml
+ 4661  kubectl describe pod/claimpod
+ 4662  vi claimasvolume.yml
+ 4663  ls
+ 4664  vi firstpvc.yml 
+ 4665  kubectl get pods
+ 4666  ls | grep claimpod
+ 4667  ls | grep -R claimpod
+ 4668  cat claimasvolume.yml 
+ 4669  vi claimasvolume.yml 
+ 4670  kubectl apply -f claimasvolume.yml
+ 4671  kubectl apply -f claimasvolume.yml > error.txt
+ 4672  ls
+ 4673  cat error.txt 
+ 4674  kubectl apply -f claimasvolume.yml >> errorr.txt
+ 4675  ls
+ 4676  rm error.txt 
+ 4677  cat errorr.txt 
+ 4678  ls > errorr.txt 
+ 4679  ls
+ 4680  kubectl apply -f claimasvolume.yml >> errorr.txt
+ 4681  cat errorr.txt 
+ 4682  ls
+ 4683  rm errorr.txt 
+ 4684  kubectl apply -f claimasvolume.yml >> errorr.txt
+ 4685  kubectl delete -f claimasvolume.yml 
+ 4686  kubectl apply -f claimasvolume.yml
+ 4687  kubectl describe pod/claimpod
+ 4688  ls
+ 4689  cd Kubernetes-practice/
+ 4690  git add *
+ 4691  git status 
+ 4692  git commit -m "Adding ingress, single-service-ingress, claim-volume, pv and pvc"
+ 4693  git push 
+ 4694  cd cka/
+ 4695  ld
+ 4696  mkdir configuration-best-practice
+ 4697  ls
+ 4698  cd configuration-best-practice/
+ 4699  cd Kubernetes-practice/cka/configuration-best-practice/
+ 4700  ls
+ 4701  vi requesting-specific-memory.yml
+ 4702  kubectl apply -f requesting-specific-memory.yml
+ 4703  vi requesting-specific-memory.yml
+ 4704  kubectl apply -f requesting-specific-memory.yml
+ 4705  kubectl get pods
+ 4706  kubectl describe frontend
+ 4707  kubectl describe pod frontend
+ 4708  ssh saineel142c.mylabserver.com
+ 4709  vi requesting-specific-ephemeral-memory.yml
+ 4710  kubectl apply -f requesting-specific-ephemeral-memory.yml
+ 4711  kubectl get pdos
+ 4712  kubectl get pods
+ 4713  kubectl describe pod frontend
+ 4714  kubectl describe pod frontend | less
+ 4715  kubectl get pods
+ 4716  kubectl get deployments
+ 4717  kubectl delete deployment nginx-deployment
+ 4718  kubectl get pods
+ 4719  kubectl get nodes 
+ 4720  kubectl label nodes saineel142c.mylabserver.com game=cricket
+ 4721  vi podwithselectednode.yml
+ 4722  kubectl apply -f  podwithselectednode.yml
+ 4723  kubectl describe pod/fornode
+ 4724  kubectl get pods -o wide 
+ 4725  kubectl get nodes --show-labels
+ 4726  kubectl taint nodes 
+ 4727  kubectl get nodes
+ 4728  kubectl taint nodes saineel142c.mylabserver.com food=nonveg:NoSchedule
+ 4729  kubectl get nodes -h | grep [tT]aint
+ 4730  kubectl get nodes -h 
+ 4731  kubectl get nodes -h | grep show-label
+ 4732  kubectl get nodes -h | grep taint
+ 4733  kubectl get pods -o wide 
+ 4734  kubectl get nodes -o wide 
+ 4735  kubectl get nodes --show-labels
+ 4736  kubectl taint nodes saineel142c.mylabserver.com key:NoSchedule-
+ 4737  kubectl taint nodes saineel142c.mylabserver.com nonveg:NoSchedule-
+ 4738  kubectl taint nodes saineel142c.mylabserver.com food:NoSchedule-
+ 4739  kubectl taint nodes saineel142c.mylabserver.com food=nonveg:NoSchedule
+ 4740  kubectl get labels
+ 4741   echo -n 'admin' > ./username.txt
+ 4742  ls
+ 4743  cd ./
+ 4744  cd
+ 4745  cd ./
+ 4746  cd Kubernetes-practice/cka/configuration-best-practice/
+ 4747  ls
+ 4748  cat username.txt 
+ 4749  echo -n '1f2d1e2e67df' > ./password.txt
+ 4750  $ kubectl create secret generic db-user-pass --from-file=./username.txt --from-file=./password.txt
+ 4751   kubectl create secret generic db-user-pass --from-file=./username.txt --from-file=./password.txt
+ 4752  kubectl get secrtes
+ 4753  kubectl get secrets
+ 4754  kubectl describe secret db-user-pass 
+ 4755  vi creatingasecret.yml
+ 4756  kubectl aplly -f creatingasecret.yml 
+ 4757  kubectl apply -f creatingasecret.yml 
+ 4758  vi creatingasecret.yml
+ 4759  kubectl apply -f creatingasecret.yml 
+ 4760  vi creatingasecret.yml
+ 4761  kubectl apply -f creatingasecret.yml 
+ 4762  kubectl create -f ./creatingasecret.yml 
+ 4763  vi creatingasecret.yml
+ 4764  kubectl create -f ./creatingasecret.yml 
+ 4765  vi creatingasecret.yml
+ 4766  kubectl create -f ./secret.yaml
+ 4767  kubectl create -f ./creatingasecret.yml 
+ 4768  kubectl get secrets
+ 4769  kubectl get secret mysecret -o yaml
+ 4770  echo 'MWYyZDFlMmU2N2Rm' | base64 --decode
+ 4771  vi podforsecret.yml
+ 4772  kubectl apply -f podforsecret.yml 
+ 4773  vi podforsecret.yml
+ 4774  kubectl apply -f podforsecret.yml 
+ 4775  kubectl get secret 
+ 4776  kubectl get pdos
+ 4777  kubectl get pods
+ 4778  kubectl describe pod-for-secret | grep secret
+ 4779  kubectl describe pod vpod-for-secret | grep secret
+ 4780  kubectl describe pod pod-for-secret | grep secret
+ 4781  history 
+ 4782  cd ..
+ 4783  ls
+ 4784  cat commands.txt 
+ 4785  history >> commands.txt 
+ 4786  l
+ 4787  ls -l
+ 4788  ls -lh
+ 4789  git add *
+ 4790  git status 
+ 4791  whereis /foo
+ 4792  whereis /fonts
+ 4793  cd /etc/
+ 4794  ls
+ 4795  ls -l | grep foo
+ 4796  cat podforsecret.yml
+ 4797  cd 
+ 4798  cd Kubernetes-practice/cka/configuration-best-practice/
+ 4799  cat podforsecret.yml
+ 4800  kubectl get events
+ 4801  cd Kubernetes-practice/cka/configuration-best-practice/
+ 4802  kubectl get events
+ 4803  ls
+ 4804  cat creatingasecret.yml 
+ 4805  kubectl get secret mysecret -o yaml
+ 4806  echo 'MWYyZDFlMmU2N2Rm' | base64 --decode
+ 4807  ls | grep -R foo
+ 4808  mv podforsecret.yml pod-mounts-secret-on-volume.yml
+ 4809  ls
+ 4810  git status 
+ 4811  kubectl apply -f pod-mounts-secret-on-volume.yml 
+ 4812  kubectl get pdos
+ 4813  kubectl get pods
+ 4814  kubectl delete -f pod-mounts-secret-on-volume.yml 
+ 4815  kubectl get pods
+ 4816  kubectl apply -f pod-mounts-secret-on-volume.yml 
+ 4817  kubectl get pods
+ 4818  kubectl apply -f pod-mounts-secret-on-volume.yml 
+ 4819  kubectl get pods
+ 4820  kubectl describe pod/resource-reserver
+ 4821  kubectl describe pod resource-reserver
+ 4822  cat pod-mounts-secret-on-volume.yml 
+ 4823  whereis /etc
+ 4824  kubectl get pods\
+ 4825  kubectl get pods
+ 4826  kubectl describe pod-for-secret
+ 4827  kubectl describe pod pod-for-secret
+ 4828  docker exec -it pod-for-secret
+ 4829  docker exec -it e62b9b8c565f
+ 4830  docker exec -it e62b9b8c565f /bin/bash
+ 4831  sudo docker exec -it e62b9b8c565f /bin/bash
+ 4832  cd
+ 4833  cd Kubernetes-practice/
+ 4834  git status 
+ 4835  git add *
+ 4836  git status 
+ 4837  echo $HOME
+ 4838  cd /home/user/.kube/
+ 4839  ls
+ 4840  cat config 
+ 4841  ssh saineel143c.mylabserver.com
+ 4842  cd /home/user/.kube/
+ 4843  ls
+ 4844  cat cache/
+ 4845  cat cache/discovery/172.31.98.60_6443/certificates.k8s.io/v1beta1/serverresources.json 
+ 4846  cd
+ 4847  cd Kubernetes-practice/cka/
+ 4848  cd ..
+ 4849  git add *
+ 4850  git status 
+ 4851  git commit -m " adding configuration files, secret and ephemeral memory yaml files"
+ 4852  git push 
+ 4853  cd Kubernetes-practice/cka/
+ 4854  mkdir policies
+ 4855  cd policies/
+ 4856  vi limitrange.yml
+ 4857  kubectl create namespace limitrange-demo
+ 4858  kubectl create -f  limitrange.yml -n limitrange-demo
+ 4859  limitrange-demo
+ 4860  kubectl describe limitrange/limit-mem-cpu-per-container
+ 4861  cat  limitrange.yml
+ 4862  kubectl describe limitrange/limit-range-for-cpu-memory
+ 4863  kubectl get limit range
+ 4864  kubectl get limitrange
+ 4865  kubectl describe limitrange/limit-range-for-cpu-memory
+ 4866  kubectl create -f limitrange.yml
+ 4867  kubectl describe limitrange/limit-range-for-cpu-memory
+ 4868  kubectl delete -f limitrange.yml
+ 4869  kubectl create -f limitrange.yml --namespace=limitrange-demo
+ 4870  kubectl get limitranges
+ 4871  vi limitrange.yml
+ 4872  kubectl create -f limitrange.yml --namespace=limitrange-demo
+ 4873  kubectl describe limitrange/limit-range-for-cpu-memory2
+ 4874  kubectl get ns
+ 4875  kubectl config set-context $(kubectl config current-context) --namespace=limitrange-demo
+ 4876  kubectl describe limitrange/limit-range-for-cpu-memory2
+ 4877  kubectl create -f limitrange.yml --namespace=limitrange-demo
+ 4878  kubectl describe limitrange/limit-range-for-cpu-memory2
+ 4879  kubectl config current-context
+ 4880  pod-for-testing-limitrange.yml
+ 4881  vi pod-for-testing-limitrange.yml
+ 4882  kubectl apply -f  pod-for-testing-limitrange.yml -n limitrange-demo
+ 4883  kubectl describe pod/busybox-1
+ 4884  kubectl describe pod/busybox-1 | grep space
+ 4885  kubectl get pods
+ 4886  kubectl get deplyoments
+ 4887  kubectl get deployments
+ 4888  kubectl get rs
+ 4889  cd ..
+ 4890  l
+ 4891  kubectl get events
+ 4892  ls
+ 4893  cd cka/
+ 4894  ls
+ 4895  kubectl apply -f pods/
+ 4896  kubectl apply -f controllers/
+ 4897  kubectl get pods
+ 4898  kubectl get events
+ 4899  cd policies/
+ 4900  vi limiting-pod-compute-resources.yml
+ 4901  kubectl apply -f  limiting-pod-compute-resources.yml
+ 4902  vi limiting-pod-compute-resources.yml
+ 4903  kubectl apply -f  limiting-pod-compute-resources.yml
+ 4904  vi limiting-pod-compute-resources.yml
+ 4905  kubectl apply -f  limiting-pod-compute-resources.yml
+ 4906  catlimiting-pod-compute-resources.yml
+ 4907  cat limiting-pod-compute-resources.yml
+ 4908  vi limiting-pod-compute-resources.yml
+ 4909  kubectl apply -f  limiting-pod-compute-resources.yml
+ 4910  vi limiting-pod-compute-resources.yml
+ 4911  kubectl apply -f  limiting-pod-compute-resources.yml
+ 4912  kubectl describe limitrange/limiting-pod-compute-resources
+ 4913  vi limiting-pvc-resources
+ 4914  mv  limiting-pvc-resources limiting-pvc-resources.yml
+ 4915  vi limiting-pvc-resources.yml 
+ 4916  kubectl apply -f  limiting-pvc-resources.yml 
+ 4917  kubectl describe limitrange/storagelimits
+ 4918  ls
+ 4919  cat limit
+ 4920  cat limitrange.yml 
+ 4921  curl -LO https://storage.googleapis.com/kubernetes-release/easy-rsa/easy-rsa.tar.gz
+ 4922  tar xzf easy-rsa.tar.gz
+ 4923  cd easy-rsa-master/easyrsa3
+ 4924  ./easyrsa init-pki
+ 4925  ./easyrsa --batch "--req-cn=${MASTER_IP}@`date +%s`" build-ca nopass
+ 4926  kubectl get pods -l app=myapp
+ 4927  kubectl annotate pod myapp-pod description="this is testing of annotation"
+ 4928  kubectl describe pod myapp-pod | grep annot
+ 4929  cd
+ 4930  cd Kubernetes-practice/cka/
+ 4931  ls
+ 4932  cat commands_5_8.txt 
+ 4933  cd ..
+ 4934  cat commands.txt 
+ 4935  history 
+ 4936  history >> commands.txt 
