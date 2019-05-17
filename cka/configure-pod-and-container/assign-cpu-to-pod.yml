@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: forcpu
+  namespace: cpu-example
+spec:
+  containers:
+  - name: forcpu-vnt
+    image: vish/stress
+    resources:
+      requests:
+        cpu: "0.5"
+      limits:
+        cpu: "1"
+    args:
+    - -cpus
+    - "2"
