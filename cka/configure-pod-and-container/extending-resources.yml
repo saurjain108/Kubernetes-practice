@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: for-extended-resources
+spec:
+  containers:
+  - name: for-extended-resources-cnt
+    image: nginx
+    resources:
+      requests:
+        example.com/dongle: 2
+      limits:
+        example.com/dongle: 2
+
+
