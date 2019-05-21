@@ -1700,3 +1700,1003 @@
   632  kubectl get deploy
   633  kubectl get rs
   634  history >> ../commands_5_8.txt 
+12804  kubectl get deployment nginx-deployment
+12805  kubectl get deploy
+12806  kubectl scale deployment/nginx-deployment --replicas=10
+12807  kubectl get deploy
+12808  kubectl get rs
+12809  kubectl get pods
+12810  kubectl autoscale deployment/nginx-deployment --min=10 --max=15 --cpu-percent=80
+12811  kubectl get pods
+12812  kubectl describe deployment nginx-deployment
+12813  kubectl autoscale deployment/nginx-deployment --min=10 --max=15 --cpu-percent=80
+12814  kubectl get deploy
+12815  kubectl get rs
+12816  history >> ../commands_5_8.txt 
+12817  cd ..
+12818  git add 
+12819  git add *
+12820  git status 
+12821  kubectl rollout history deployment.v1.apps/nginx-deployment
+12822  kubectl rollout history deployment.v1.apps/nginx-deployments "nginx-deploymeny"
+12823  kubectl rollout history deployment.v1.apps/nginx-deployment
+12824  kubectl annotate deployment.v1.apps/nginx-deployment kubernetes.io/change-cause="image updated to 1.9.1"
+12825  kubectl rollout history deployment.v1.apps/nginx-deployment
+12826  history 
+12827  cd Kubernetes-practice/cka/controllers/cd
+12828  ls
+12829  git clone https://github.com/saurjain108/ansible.git
+12830  ls
+12831  cd ansible/
+12832  ls
+12833  ll
+12834  ls
+12835  ls playbooks/
+12836  ls
+12837  mkdir course
+12838  cd course/
+12839  cd ..
+12840  git status 
+12841  cd course/
+12842  touch abc.txt
+12843  cd ..
+12844  git status 
+12845  git commit -m "testing"
+12846  ls
+12847  mv abc.txt course/
+12848  ls
+12849  git status 
+12850  git add *
+12851  git status 
+12852  git commit -m "testing"
+12853  git push 
+12854  cd Kubernetes-practice/cka/controllers/
+12855  ls
+12856  vi firststatefulset.yml
+12857  kubectl apply -f firststatefulset.yml
+12858  vi firststatefulset.yml
+12859  kubectl apply -f firststatefulset.yml
+12860  vi firststatefulset.yml
+12861  kubectl apply -f firststatefulset.yml
+12862  vi firststatefulset.yml
+12863  kubectl apply -f firststatefulset.yml
+12864  kubectl get pods
+12865  kubectl autoscale deployment/nginx-deployment --min=4 --max=15 --cpu-percent=80
+12866  kubectl get pods
+12867  vi firststatefulset-2.yml
+12868  kubectl apply -f firststatefulset-2.yml
+12869  vi firststatefulset-2.yml
+12870  kubectl apply -f firststatefulset-2.yml
+12871  vi firststatefulset-2.yml
+12872  kubectl apply -f firststatefulset-2.yml
+12873  kubectl get ss
+12874  kubectl get statefulset
+12875  kubectl get pods
+12876  kubectl delete -f firststatefulset-2.yml
+12877  kubectl get -h
+12878  kubectl get -h | [vV]olune
+12879  kubectl get -h | [vV]olume
+12880  kubectl get -h | grep [vV]olume
+12881  kubectl get -h | less
+12882  kubectl get persistanrvolumes
+12883  kubectl get persistanrvolume
+12884  kubectl get persistantvolumes
+12885  kubectl get pv
+12886  kubectl get volumes
+12887  vi firstdaemonset.yml
+12888  kubectl apply -f firstdaemonset.yml
+12889  kubectl get ds
+12890  kubectl get daemonset
+12891  kubectl get pods
+12892  kubectl get daemonsets
+12893  kubectl apply -f firstdaemonset.yml
+12894  kubectl get ns
+12895  kubectl get services
+12896  kubectl get deployment --show-labels
+12897  kubectl get nodes 
+12898  kubectl get nodes  -o wide 
+12899  kubectl describe nodes 
+12900  kubectl get nodes 
+12901  kubectl describe node saineel142c.mylabserver.com | less
+12902  kubectl describe node saineel143c.mylabserver.com | less
+12903  kubectl get jobs
+12904  vi testing_ttl.yml
+12905  kubectl apply -f testing_ttl.yml
+12906  vi testing_ttl.yml
+12907  kubectl apply -f testing_ttl.yml
+12908  kubectl get jobs
+12909  ls
+12910  mv testing_ttl.yml ../
+12911  ls
+12912  kubectl describe job for-ttl
+12913  cd .., cd ..
+12914  cd ..
+12915  git add 8
+12916  git add *
+12917  git status 
+12918  git commit -m "Adding daemon,deployment,stateful and ttl files and also updated commands"
+12919  git push 
+12920  kubectl get pods
+12921  kubectl get jobs
+12922  kubectl delete -f testing_ttl.yml
+12923  cd cka/
+12924  ls
+12925  cd cka/
+12926  kubectl delete -f testing_ttl.yml
+12927  kubectl get pods
+12928  kubectl get deply
+12929  kubectl get deploy
+12930  kubectl delele pod nginx-deployment-6cb79996b5-2sh4q nginx-deployment-6cb79996b5-4wtbm
+12931  kubectl delete pod nginx-deployment-6cb79996b5-2sh4q nginx-deployment-6cb79996b5-4wtbm
+12932  kubectl get pods
+12933  cd controllers/
+12934  ls
+12935  cd ..
+12936  kubectl apply -f testing_ttl.yml
+12937  kubectl get pods
+12938  kubectl logs for-ttl-pddxl
+12939  cat testing_ttl.yml 
+12940  vi checking-activedeadlinesecondandbackofflimit.yml
+12941  kubectl apply -f checking-activedeadlinesecondandbackofflimit.yml
+12942  kubectl get pods
+12943  ls
+12944  mv checking-activedeadlinesecondandbackofflimit.yml controllers/
+12945  cat testing_ttl.yml 
+12946  cd ..
+12947  git status 
+12948  git add *
+12949  git commit -m "adding activedeadlinesecondandbackofflimit file"
+12950  git push 
+12951  mkdir "services,load-balancers and networking"
+12952  ls
+12953  rm -rf "services,load-balancers and networking"
+12954  mkdir 'services,load-balancers and networking'
+12955  lls
+12956  ls
+12957  cd services\,load-balancers\ and\ networking/
+12958  ls
+12959  vi firstservice.yml
+12960  kubectl get services
+12961  kubectl apply -f firstservice.yml
+12962  vi firstservice.yml
+12963  kubectl apply -f firstservice.yml
+12964  vi firstservice.yml
+12965  kubectl apply -f firstservice.yml
+12966  vi firstservice.yml
+12967  kubectl apply -f firstservice.yml
+12968  vi firstservice.yml
+12969  kubectl get services
+12970  kubectl get services 
+12971  kubectl describe service my-service
+12972  vi servicewithoutselector.yml
+12973  kubectl apply -f servicewithoutselector.yml 
+12974  vi servicewithoutselector.yml
+12975  kubectl apply -f servicewithoutselector.yml 
+12976  vi servicewithoutselector.yml
+12977  kubectl apply -f servicewithoutselector.yml 
+12978  kubectl get services
+12979  kubectl get endpoints
+12980  vi firstservice.yml
+12981  vi multiportservice.yml
+12982  vi firstservice.yml
+12983  vi multiportservice.yml
+12984  kubectl apply -f multiportservice.yml 
+12985  vi multiportservice.yml
+12986  kubectl apply -f multiportservice.yml 
+12987  kubectl get services
+12988  kubectl describe service multiport-service
+12989  vi multiportservice.yml
+12990  vi firstservice.yml
+12991  kubectl apply -f firstservice.yml
+12992  cd ..
+12993  ls | grep -R IP
+12994  vi cd cka/
+12995  cd cka/
+12996  ls | grep -R IP
+12997  vi firstservice.yml
+12998  cd ..
+12999  ls
+13000  mv services\,load-balancers\ and\ networking/ cka/
+13001  ls
+13002  cd cka/
+13003  ls
+13004  ls | grep -R IP
+13005  kubectl apply -f firstservice.yml
+13006  cd services\,load-balancers\ and\ networking/
+13007  kubectl apply -f firstservice.yml
+13008  vi firstservice.yml
+13009  kubectl apply -f firstservice.yml
+13010  vi firstservice.yml
+13011  kubectl apply -f firstservice.yml
+13012  vi firstservice.yml
+13013  kubectl get pods
+13014  vi firstservice.yml
+13015  kubectl apply -f firstservice.yml
+13016  vi firstservice.yml
+13017  kubectl get pods
+13018  kubectl describe pod nginx
+13019  kubectl describe pod nginx | grep [hH]ost
+13020  cd Kubernetes-practice/cka/services\,load-balancers\ and\ networking/
+13021  vi exposingpodtocluster.yml
+13022  kubectl apply -f exposingpodtocluster.yml
+13023  vi exposingpodtocluster.yml
+13024  kubectl apply -f exposingpodtocluster.yml
+13025  kubectl get pods
+13026  kubectl get pods --match-label run==my-app-running
+13027  kubectl get deployments --show-labels
+13028  vi exposingpodtocluster.yml
+13029  kubectl get pods -l run=my-app-running -o wide
+13030  kubectl get pods -l run=my-app-running - o yaml | grep podID
+13031  kubectl get pods -l run=my-app-running -o yaml | grep podID
+13032  kubectl get pods -l run=my-app-running -o yaml
+13033  kubectl get pods -l run=my-app-running -o yaml | grep pod
+13034  curl 172.31.97.179
+13035  ssh 172.31.97.179
+13036  kubectl get services kube-dns --namespace=kube-system
+13037  kubectl run curl --image=radial/busyboxplus:curl -i --tty
+13038  make keys secret make keys secret KEY=/tmp/nginx.key CERT=/tmp/nginx.crt SECRET=/tmp/secret.json
+13039  cd ..
+13040  git status 
+13041  git add *
+13042  git status 
+13043  git commit -m " adding service multiport service and servicewithoutselector files"
+13044  git push 
+13045  cd cka/services\,load-balancers\ and\ networking/
+13046  vi firstingress.yml
+13047  kubectl apply -f firstingress.yml
+13048  kubectl get ingrss
+13049  kubectl get ingress
+13050  vi singleserviceingress.yml
+13051  kubectl apply -f singleserviceingress.yml 
+13052  kubectl describe -f singleserviceingress.yml 
+13053  kubectl get ingress
+13054  cd Kubernetes-practice/cka/services\,load-balancers\ and\ networking/
+13055  kubectl get ingress
+13056  su 
+13057  cd
+13058  ls
+13059  git clone https://github.com/saurjain108/linux-.git
+13060  ls
+13061  cd ansible/
+13062  ls
+13063  vi README.md 
+13064  cd
+13065  cd ansible/
+13066  ls
+13067  cat command-10-9.txt 
+13068   ls
+13069  -m ping
+13070  ping 8.8.8.8
+13071  cd Kubernetes-practice/cka/services\,load-balancers\ and\ networking/
+13072  ls
+13073  cd ..
+13074  ls
+13075  ca adns.yml 
+13076  cat adns.yml 
+13077  ls
+13078  cat resource-reserver.yml 
+13079  ls
+13080  cat service
+13081  cat service.yml 
+13082  cat firstpod.yml 
+13083  cat specifyinginitcontainer.yml 
+13084  ls
+13085  cd controllers/
+13086  l
+13087  vi firstdaemonset.yml 
+13088  vi firstdeployment.yml 
+13089  vi firstreplicaset.yml 
+13090  vi firstreplicationcontroller.yml 
+13091  vi firststatefulset.yml 
+13092  cd ..
+13093  ls
+13094  mkdir storage
+13095  cd storage/ls
+13096  cd storag
+13097  cd storaga
+13098  cd storage/
+13099  ls
+13100  echo $ENV
+13101  ENV
+13102  $ENV
+13103  env
+13104  cd Kubernetes-practice/cka/storage/
+13105  ls
+13106  vi firstpv.yml
+13107  kubectl apply -f firstpv.yml
+13108  vi firstpv.yml
+13109  kubectl apply -f firstpv.yml
+13110  kubectl get pv
+13111  kubectl get pdos
+13112  kubectl get pods
+13113  kubectl describe pv/pv1
+13114  kubectl get pv -o widw
+13115  kubectl get pv -o wide
+13116  vi firstpvc.yml
+13117  kubectl apply -f firstpvc.yml
+13118  vi claimasvolume.yml
+13119  su -
+13120  kubectl -f  claimasvolume.yml
+13121  kubectl -f claimasvolume.yml
+13122  kubectl apply -f claimasvolume.yml
+13123  kubectl describe pod/claimpod
+13124  vi claimasvolume.yml
+13125  ls
+13126  vi firstpvc.yml 
+13127  kubectl get pods
+13128  ls | grep claimpod
+13129  ls | grep -R claimpod
+13130  cat claimasvolume.yml 
+13131  vi claimasvolume.yml 
+13132  kubectl apply -f claimasvolume.yml
+13133  kubectl apply -f claimasvolume.yml > error.txt
+13134  ls
+13135  cat error.txt 
+13136  kubectl apply -f claimasvolume.yml >> errorr.txt
+13137  ls
+13138  rm error.txt 
+13139  cat errorr.txt 
+13140  ls > errorr.txt 
+13141  ls
+13142  kubectl apply -f claimasvolume.yml >> errorr.txt
+13143  cat errorr.txt 
+13144  ls
+13145  rm errorr.txt 
+13146  kubectl apply -f claimasvolume.yml >> errorr.txt
+13147  kubectl delete -f claimasvolume.yml 
+13148  kubectl apply -f claimasvolume.yml
+13149  kubectl describe pod/claimpod
+13150  ls
+13151  cd Kubernetes-practice/
+13152  git add *
+13153  git status 
+13154  git commit -m "Adding ingress, single-service-ingress, claim-volume, pv and pvc"
+13155  git push 
+13156  cd cka/
+13157  ld
+13158  mkdir configuration-best-practice
+13159  ls
+13160  cd configuration-best-practice/
+13161  cd Kubernetes-practice/cka/configuration-best-practice/
+13162  ls
+13163  vi requesting-specific-memory.yml
+13164  kubectl apply -f requesting-specific-memory.yml
+13165  vi requesting-specific-memory.yml
+13166  kubectl apply -f requesting-specific-memory.yml
+13167  kubectl get pods
+13168  kubectl describe frontend
+13169  kubectl describe pod frontend
+13170  ssh saineel142c.mylabserver.com
+13171  vi requesting-specific-ephemeral-memory.yml
+13172  kubectl apply -f requesting-specific-ephemeral-memory.yml
+13173  kubectl get pdos
+13174  kubectl get pods
+13175  kubectl describe pod frontend
+13176  kubectl describe pod frontend | less
+13177  kubectl get pods
+13178  kubectl get deployments
+13179  kubectl delete deployment nginx-deployment
+13180  kubectl get pods
+13181  kubectl get nodes 
+13182  kubectl label nodes saineel142c.mylabserver.com game=cricket
+13183  vi podwithselectednode.yml
+13184  kubectl apply -f  podwithselectednode.yml
+13185  kubectl describe pod/fornode
+13186  kubectl get pods -o wide 
+13187  kubectl get nodes --show-labels
+13188  kubectl taint nodes 
+13189  kubectl get nodes
+13190  kubectl taint nodes saineel142c.mylabserver.com food=nonveg:NoSchedule
+13191  kubectl get nodes -h | grep [tT]aint
+13192  kubectl get nodes -h 
+13193  kubectl get nodes -h | grep show-label
+13194  kubectl get nodes -h | grep taint
+13195  kubectl get pods -o wide 
+13196  kubectl get nodes -o wide 
+13197  kubectl get nodes --show-labels
+13198  kubectl taint nodes saineel142c.mylabserver.com key:NoSchedule-
+13199  kubectl taint nodes saineel142c.mylabserver.com nonveg:NoSchedule-
+13200  kubectl taint nodes saineel142c.mylabserver.com food:NoSchedule-
+13201  kubectl taint nodes saineel142c.mylabserver.com food=nonveg:NoSchedule
+13202  kubectl get labels
+13203   echo -n 'admin' > ./username.txt
+13204  ls
+13205  cd ./
+13206  cd
+13207  cd ./
+13208  cd Kubernetes-practice/cka/configuration-best-practice/
+13209  ls
+13210  cat username.txt 
+13211  echo -n '1f2d1e2e67df' > ./password.txt
+13212  $ kubectl create secret generic db-user-pass --from-file=./username.txt --from-file=./password.txt
+13213   kubectl create secret generic db-user-pass --from-file=./username.txt --from-file=./password.txt
+13214  kubectl get secrtes
+13215  kubectl get secrets
+13216  kubectl describe secret db-user-pass 
+13217  vi creatingasecret.yml
+13218  kubectl aplly -f creatingasecret.yml 
+13219  kubectl apply -f creatingasecret.yml 
+13220  vi creatingasecret.yml
+13221  kubectl apply -f creatingasecret.yml 
+13222  vi creatingasecret.yml
+13223  kubectl apply -f creatingasecret.yml 
+13224  kubectl create -f ./creatingasecret.yml 
+13225  vi creatingasecret.yml
+13226  kubectl create -f ./creatingasecret.yml 
+13227  vi creatingasecret.yml
+13228  kubectl create -f ./secret.yaml
+13229  kubectl create -f ./creatingasecret.yml 
+13230  kubectl get secrets
+13231  kubectl get secret mysecret -o yaml
+13232  echo 'MWYyZDFlMmU2N2Rm' | base64 --decode
+13233  vi podforsecret.yml
+13234  kubectl apply -f podforsecret.yml 
+13235  vi podforsecret.yml
+13236  kubectl apply -f podforsecret.yml 
+13237  kubectl get secret 
+13238  kubectl get pdos
+13239  kubectl get pods
+13240  kubectl describe pod-for-secret | grep secret
+13241  kubectl describe pod vpod-for-secret | grep secret
+13242  kubectl describe pod pod-for-secret | grep secret
+13243  history 
+13244  cd ..
+13245  ls
+13246  cat commands.txt 
+13247  history >> commands.txt 
+13248  l
+13249  ls -l
+13250  ls -lh
+13251  git add *
+13252  git status 
+13253  whereis /foo
+13254  whereis /fonts
+13255  cd /etc/
+13256  ls
+13257  ls -l | grep foo
+13258  cat podforsecret.yml
+13259  cd 
+13260  cd Kubernetes-practice/cka/configuration-best-practice/
+13261  cat podforsecret.yml
+13262  kubectl get events
+13263  cd Kubernetes-practice/cka/configuration-best-practice/
+13264  kubectl get events
+13265  ls
+13266  cat creatingasecret.yml 
+13267  kubectl get secret mysecret -o yaml
+13268  echo 'MWYyZDFlMmU2N2Rm' | base64 --decode
+13269  ls | grep -R foo
+13270  mv podforsecret.yml pod-mounts-secret-on-volume.yml
+13271  ls
+13272  git status 
+13273  kubectl apply -f pod-mounts-secret-on-volume.yml 
+13274  kubectl get pdos
+13275  kubectl get pods
+13276  kubectl delete -f pod-mounts-secret-on-volume.yml 
+13277  kubectl get pods
+13278  kubectl apply -f pod-mounts-secret-on-volume.yml 
+13279  kubectl get pods
+13280  kubectl apply -f pod-mounts-secret-on-volume.yml 
+13281  kubectl get pods
+13282  kubectl describe pod/resource-reserver
+13283  kubectl describe pod resource-reserver
+13284  cat pod-mounts-secret-on-volume.yml 
+13285  whereis /etc
+13286  kubectl get pods\
+13287  kubectl get pods
+13288  kubectl describe pod-for-secret
+13289  kubectl describe pod pod-for-secret
+13290  docker exec -it pod-for-secret
+13291  docker exec -it e62b9b8c565f
+13292  docker exec -it e62b9b8c565f /bin/bash
+13293  sudo docker exec -it e62b9b8c565f /bin/bash
+13294  cd
+13295  cd Kubernetes-practice/
+13296  git status 
+13297  git add *
+13298  git status 
+13299  echo $HOME
+13300  cd /home/user/.kube/
+13301  ls
+13302  cat config 
+13303  ssh saineel143c.mylabserver.com
+13304  cd /home/user/.kube/
+13305  ls
+13306  cat cache/
+13307  cat cache/discovery/172.31.98.60_6443/certificates.k8s.io/v1beta1/serverresources.json 
+13308  cd
+13309  cd Kubernetes-practice/cka/
+13310  cd ..
+13311  git add *
+13312  git status 
+13313  git commit -m " adding configuration files, secret and ephemeral memory yaml files"
+13314  git push 
+13315  cd Kubernetes-practice/cka/
+13316  mkdir policies
+13317  cd policies/
+13318  vi limitrange.yml
+13319  kubectl create namespace limitrange-demo
+13320  kubectl create -f  limitrange.yml -n limitrange-demo
+13321  limitrange-demo
+13322  kubectl describe limitrange/limit-mem-cpu-per-container
+13323  cat  limitrange.yml
+13324  kubectl describe limitrange/limit-range-for-cpu-memory
+13325  kubectl get limit range
+13326  kubectl get limitrange
+13327  kubectl describe limitrange/limit-range-for-cpu-memory
+13328  kubectl create -f limitrange.yml
+13329  kubectl describe limitrange/limit-range-for-cpu-memory
+13330  kubectl delete -f limitrange.yml
+13331  kubectl create -f limitrange.yml --namespace=limitrange-demo
+13332  kubectl get limitranges
+13333  vi limitrange.yml
+13334  kubectl create -f limitrange.yml --namespace=limitrange-demo
+13335  kubectl describe limitrange/limit-range-for-cpu-memory2
+13336  kubectl get ns
+13337  kubectl config set-context $(kubectl config current-context) --namespace=limitrange-demo
+13338  kubectl describe limitrange/limit-range-for-cpu-memory2
+13339  kubectl create -f limitrange.yml --namespace=limitrange-demo
+13340  kubectl describe limitrange/limit-range-for-cpu-memory2
+13341  kubectl config current-context
+13342  pod-for-testing-limitrange.yml
+13343  vi pod-for-testing-limitrange.yml
+13344  kubectl apply -f  pod-for-testing-limitrange.yml -n limitrange-demo
+13345  kubectl describe pod/busybox-1
+13346  kubectl describe pod/busybox-1 | grep space
+13347  kubectl get pods
+13348  kubectl get deplyoments
+13349  kubectl get deployments
+13350  kubectl get rs
+13351  cd ..
+13352  l
+13353  kubectl get events
+13354  ls
+13355  cd cka/
+13356  ls
+13357  kubectl apply -f pods/
+13358  kubectl apply -f controllers/
+13359  kubectl get pods
+13360  kubectl get events
+13361  cd policies/
+13362  vi limiting-pod-compute-resources.yml
+13363  kubectl apply -f  limiting-pod-compute-resources.yml
+13364  vi limiting-pod-compute-resources.yml
+13365  kubectl apply -f  limiting-pod-compute-resources.yml
+13366  vi limiting-pod-compute-resources.yml
+13367  kubectl apply -f  limiting-pod-compute-resources.yml
+13368  catlimiting-pod-compute-resources.yml
+13369  cat limiting-pod-compute-resources.yml
+13370  vi limiting-pod-compute-resources.yml
+13371  kubectl apply -f  limiting-pod-compute-resources.yml
+13372  vi limiting-pod-compute-resources.yml
+13373  kubectl apply -f  limiting-pod-compute-resources.yml
+13374  kubectl describe limitrange/limiting-pod-compute-resources
+13375  vi limiting-pvc-resources
+13376  mv  limiting-pvc-resources limiting-pvc-resources.yml
+13377  vi limiting-pvc-resources.yml 
+13378  kubectl apply -f  limiting-pvc-resources.yml 
+13379  kubectl describe limitrange/storagelimits
+13380  ls
+13381  cat limit
+13382  cat limitrange.yml 
+13383  curl -LO https://storage.googleapis.com/kubernetes-release/easy-rsa/easy-rsa.tar.gz
+13384  tar xzf easy-rsa.tar.gz
+13385  cd easy-rsa-master/easyrsa3
+13386  ./easyrsa init-pki
+13387  ./easyrsa --batch "--req-cn=${MASTER_IP}@`date +%s`" build-ca nopass
+13388  kubectl get pods -l app=myapp
+13389  kubectl annotate pod myapp-pod description="this is testing of annotation"
+13390  kubectl describe pod myapp-pod | grep annot
+13391  cd
+13392  cd Kubernetes-practice/cka/
+13393  ls
+13394  cat commands_5_8.txt 
+13395  cd ..
+13396  cat commands.txt 
+13397  history 
+13398  history >> commands.txt 
+13399  git status 
+13400  git add *
+13401  git status 
+13402  git commit -m " adding a policy files and updated the commands"
+13403  git push 
+13404  cd
+13405  su linux
+13406  kubectl get pods -Lapp
+13407  kubectl get pods -L app
+13408  kubectl get deployments
+13409  kubectl scale deployment/nginx-deployment --replicas=7
+13410  kubectl get pods
+13411  kubectl logs for-ttl-pddxl
+13412  kubectl logs pi-with-timeout-r7jv7
+13413  kubectl logs busybox-1
+13414  kubectl get pods
+13415  kubectl describe pod/busybox-1
+13416  cd /dev/
+13417  cd
+13418  su linux
+13419  ls
+13420  cd Kubernetes-practice/
+13421  cd cka/
+13422  ls
+13423  history | grep apply
+13424  ls
+13425  kubectl delete -f controllers/
+13426  kubectl delete -f pods/
+13427  kubectl get pods
+13428  kubectl delete -f pods/
+13429  kubectl get pods
+13430  kubectl delete pod busybox-1
+13431  kubectl get nsa
+13432  kubectl get ns
+13433  kubectl delete ns my-ns limitrange-demo
+13434  kubectl get rc
+13435  kubectl get rs
+13436  kubectl get noides
+13437  kubectl get nodes
+13438  kubectl version 
+13439  kubectl get apiservers
+13440  kubectl get apiservices 
+13441  kubectl get apiservices | grep metri
+13442  mkdir assign-memory-to-resources
+13443  cd assign-memory-to-resources/
+13444  ls
+13445  kubectl create ns mem-example
+13446  kubectl get ns 
+13447  cd ..
+13448  mv assign-memory-to-resources/ configure-pod-and-container
+13449  ls
+13450  cd configure-pod-and-container/
+13451  ls
+13452  vi assign-memory-to-pod.yml
+13453  kubectl apply -f assign-memory-to-pod.yml --ns=mem-example
+13454  kubectl apply -f assign-memory-to-pod.yml --namespace=mem-example
+13455  vi assign-memory-to-pod.yml
+13456  kubectl apply -f assign-memory-to-pod.yml --namespace=mem-example
+13457  kubectl get pod/formemory --namespace=mem-example
+13458  kubectl get pod/formemory -o yaml --namespace=mem-example
+13459  kubectl top pod/formemory --namespace=mem-example
+13460  kubectl top pod formemory --namespace=mem-example
+13461  kubectl top pod formemory 
+13462  kubectl top pod formemory --namespace=mem-example
+13463  kubectl describe pod formemory 
+13464  kubectl describe pod formemory
+13465  kubectl get pod
+13466  kubectl get pod --namespace=mem-example
+13467  kubectl describe pod --namespace=mem-example
+13468  kubectl -h | grep top
+13469  kubectl top
+13470  kubectl top pod formemory --namespace=mem-example
+13471  kubectl top pod formemory
+13472  kubectl top pod -h
+13473  kubectl get apiservers
+13474  kubectl version 
+13475  kubectl version | grep 1.8
+13476  kubectl version | grep 1.7
+13477  cd
+13478  kubectl create -f deploy/1.8+/
+13479  git clone https://github.com/kubernetes-incubator/metrics-server.git
+13480  ls
+13481  cd metrics-server/
+13482  kubectl cluster-info
+13483  kubectl cluster-info dump
+13484  kubectl cluster-info dump | grep 1.
+13485  kubectl cluster-info dump | grep 1.8
+13486  kubectl version
+13487  kubectl create -f deploy/1.8+/
+13488  kubectl top pod formemory
+13489  kubectl top pod formemory --namespace=mem-example
+13490  cd
+13491  kubectl get pods namespace=mem-example
+13492  cd Kubernetes-practice/cka/configure-pod-and-container/
+13493  history 
+13494  kubectl get pod --namespace=mem-example
+13495  kubectl top pod formemory --namespace=mem-example
+13496  history 
+13497  kubectl delete -f assign-memory-to-pod.yml --namespace=mem-example
+13498  kubectl get apiservices
+13499  kubectl apply -f assign-memory-to-pod.yml --namespace=mem-example
+13500  kubectl get pods --namespace=mem-example
+13501  kubectl top pod formemory --namespace=mem-example
+13502  kubectl top -h
+13503  kubectl top node -h
+13504  kubectl get nodes 
+13505  kubectl top node saineel142c.mylabserver.com
+13506  sudo shutdown -r
+13507  cal
+13508  date 
+13509  kubectl delete -f assign-memory-to-pod.yml --namespace=mem-example
+13510  cd Kubernetes-practice/cka/configure-pod-and-container/
+13511  kubectl delete -f assign-memory-to-pod.yml --namespace=mem-example
+13512  kubectl get apiservices
+13513  kubectl apply -f assign-memory-to-pod.yml --namespace=mem-example
+13514  kubectl top pod formemory --namespace=mem-example
+13515  kubectl top pods --v=10
+13516  vi assign-memory-to-pod.yml 
+13517  kubectl apply -f assign-memory-to-pod.yml --namespace=mem-example
+13518  kubectl delete -f assign-memory-to-pod.yml --namespace=mem-example
+13519  kubectl apply -f assign-memory-to-pod.yml --namespace=mem-example
+13520  kubectl get pods
+13521  kubectl get pods --namespace=mem-example
+13522  kubectl get describe pod formemory --namespace=mem-example
+13523  kubectl describe pod formemory --namespace=mem-example
+13524  kubectl get pods --namespace=mem-example
+13525  kubectl describe nodes
+13526  kubectl describe nodes | grep 00MK
+13527  kubectl describe nodes | grep OOMK
+13528  vi assign-memory-to-pod.yml
+13529  kubectl apply -f assign-memory-to-pod.yml --namespace=mem-example
+13530  kubectl describe nodes | grep OOMK
+13531  kubectl apply -f assign-memory-to-pod.yml --namespace=mem-example
+13532  kubectl delete -f assign-memory-to-pod.yml --namespace=mem-example
+13533  kubectl apply -f assign-memory-to-pod.yml --namespace=mem-example
+13534  vi assign-cpu-to-pod.yml
+13535  kubectl create ns cpu-example
+13536  kubectl create -f  assign-cpu-to-pod.yml --namespace=cpu-example
+13537  vi assign-cpu-to-pod.yml
+13538  kubectl create -f  assign-cpu-to-pod.yml --namespace=cpu-example
+13539  vi assign-cpu-to-pod.yml
+13540  kubectl create -f  assign-cpu-to-pod.yml --namespace=cpu-example
+13541  kubectl get os
+13542  kubectl get ns
+13543  kubectl apply -f assign-cpu-to-pod.yml --namespace=cpu-example
+13544  vi assign-cpu-to-pod.yml
+13545  kubectl apply -f assign-cpu-to-pod.yml --namespace=cpu-example
+13546  kubectl get pod for-cpu --namespace=cpu-example
+13547  kubectl get pod forcpu --namespace=cpu-example
+13548  kubectl get pod forcpu --namespace=cpu-example -o yaml
+13549  kubectl get pod forcpu --namespace=cpu-example -o yaml | grep mili
+13550  kubectl get pod forcpu --namespace=cpu-example -o yaml | grep milli
+13551  kubectl get pod forcpu --namespace=cpu-example -o yaml | grep 500
+13552  kubectl top pod forcpu --namespace-cpu-example
+13553  kubectl top pod forcpu --namespace=cpu-example
+13554  kubectl create ns qos-example
+13555  cd ..
+13556  git status 
+13557  git add *
+13558  git status 
+13559  cd cka/configure-pod-and-container/
+13560  vi qos-for-pod.yml
+13561  kubectl get ns
+13562  vi qos-for-pod.yml
+13563  kubectl apply -f  qos-for-pod.yml --namespace=qos-example
+13564  kubectl apply -f qos-for-pod.yml --namespace=qos-example
+13565  vi qos-for-pod.yml
+13566  kubectl apply -f qos-for-pod.yml --namespace=qos-example
+13567  vi qos-for-pod.yml
+13568  kubectl apply -f qos-for-pod.yml --namespace=qos-example
+13569  kubectl get pod forqos --namespace=qos-example
+13570  kubectl get pod forqos --namespace=qos-example -o yaml | Guar
+13571  kubectl get pod forqos --namespace=qos-example -o yaml |grep Guar
+13572  cd ..
+13573  git status 
+13574  git add *
+13575  git commit -m "adding files for assinging a specific memory and cpu to pod and qos of pod"
+13576  git push 
+13577  kubectl get pods
+13578  kubectl get pods --namespace=ALL
+13579  kubectl get pods --namespace=mem-example
+13580  kubectl get pods --namespace=qos-example
+13581  kubectl get pods --namespace -h
+13582  kubectl get pods -h
+13583  kubectl get pods -h | grep namespace
+13584  kubectl get pods --namespace=false
+13585  kubectl get pods --all-namespace
+13586  kubectl get pods -h
+13587  kubectl get pods -h | less
+13588  kubectl get pods --all-namespace=false
+13589  kubectl get pods -h | less
+13590  cd Kubernetes-practice/cka/configure-pod-and-container/
+13591  ls
+13592  vi extending-resources.yml
+13593  kubectl get nodes
+13594  PATCH /api/v1/nodes/<your-node-name>/status HTTP/1.1
+13595  Accept: application/json
+13596  Content-Type: application/json-patch+json
+13597  Host: k8s-master:8080
+13598  kubectl proxy
+13599  curl --header "Content-Type: application/json-patch+json" --request PATCH --data '[{"op": "add", "path": "/status/capacity/example.com~1dongle", "value": "4"}]' kubectl proxy
+13600  kubectl proxy
+13601  vi extending-resources.yml
+13602  vi volumeforpod.yml
+13603  kubectl apply -f  volumeforpod.yml
+13604  vi volumeforpod.yml
+13605  kubectl apply -f  volumeforpod.yml
+13606  vi volumeforpod.yml
+13607  kubectl apply -f  volumeforpod.yml
+13608  vi volumeforpod.yml
+13609  kubectl apply -f  volumeforpod.yml
+13610  kubectl create ns forvolume
+13611  vi volumeforpod.yml
+13612  kubectl apply -f  volumeforpod.yml --namespace=forvolume
+13613  kubectl get pod redis --namespace=forvolume --watch
+13614  kubectl get pod forvolume --namespace=forvolume --watch
+13615  kubectl get pod volumeforpod --namespace=volume --watch
+13616  kubectl get pod volumeforpod --namespace=forvolume --watch
+13617  kubectl exec -it volumeforpod -- /bin/bash
+13618  kubectl exec -it volumeforpod --namespace=forvolume-- /bin/bash
+13619  kubectl get pods
+13620  kubectl get pods --namespace=forpos
+13621  kubectl get pods --namespace=forpod
+13622  kubectl get pods --namespace=forvolume
+13623  kubectl exec -it volumeforpod 
+13624  kubectl exec -it volumeforpod -- /bin/bash
+13625  kubectl exec -it volumeforpod --namespace=forvolume  /bin/bash
+13626  kubectl get nod
+13627  kubectl get nodes
+13628  ssh saineel142c.mylabserver.com
+13629  vi pvforpod.yml
+13630  kubectl create -f  pvforpod.yml
+13631  kubectl describe persistentvolume/pvforpod
+13632  kubectl describe persistentvolume/pvforpod -o yaml
+13633  kubectl describe persistentvolume/pvforpod -o yaml | grep neel
+13634  kubectl describe persistentvolume/pvforpod -o yaml
+13635  kubectl describe persistentvolume pvforpod -o yaml
+13636  kubectl get persistentvolume pvforpod -o yaml
+13637  kubectl get persistentvolume pvforpod 
+13638  vi pvcforpod.yml
+13639  kubectl create -f  pvcforpod.yml 
+13640  ls | grep -R limiting-pvc-resources.yml 
+13641  cd ..
+13642  ls | grep -R limiting-pvc-resources.yml 
+13643  ls | grep -R limit
+13644  ls | grep -R limiting
+13645  cd configure-pod-and-container/
+13646  ls
+13647  vi pvcforpod.yml 
+13648  kubectl delete -f  pvcforpod.yml 
+13649  ls
+13650  kubectl delete -f pvforpod.yml 
+13651  vi pvforpod.yml 
+13652  kubectl create ns forpvandpvc
+13653  kubectl apply -f pvforpod.yml 
+13654  vi pvcforpod.yml 
+13655  kubectl apply -f pvcforpod.yml 
+13656  kubectl get persistentvolumeclaim/pvcfodpod -o yaml
+13657  kubectl get persistentvolumeclaim/pvcfodpod --namespace forpvandovc -o yaml
+13658  kubectl get persistentvolumeclaim/pvcfodpod --namespace forpvandpvc -o yaml
+13659  kubectl get persistentvolumeclaim/pvcfodpod --namespace forpvandpvc
+13660  vi pvcforpod.yml 
+13661  kubectl get persistentvolume/pvfodpod --namespace forpvandpvc
+13662  kubectl hist
+13663  history 
+13664  ls
+13665  vi pvforpod.yml 
+13666  kubectl get pv --namespace=forpvandpvc
+13667  kubectl get persistentvolumeclaim/pvcfodpod --namespace forpvandpvc
+13668  ls
+13669  vi podwithpvc.yml
+13670  kubectl get persistentvolumeclaim/pvcfodpod --namespace forpvandpvc
+13671  vi podwithpvc.yml
+13672  kubectl apply -f podwithpvc.yml 
+13673  kubectl apply -f podwithpvc.yml --namespace=forpvandpvc
+13674  kubectl get pod/task-pv-pod --namespace=forpvandpvc
+13675  kubectl apply -f podwithpvc.yml --namespace=forpvandpvc
+13676  kubectl describe pod/task-pv-pod --namespace=forpvandpvc
+13677  vi podwithpvc.yml
+13678  kubectl delete -f podwithpvc.yml --namespace=forpvandpvc
+13679  kubectl apply -f podwithpvc.yml --namespace=forpvandpvc
+13680  kubectl describe pod/task-pv-pod --namespace=forpvandpvc
+13681  kubectl get pod/task-pv-pod --namespace=forpvandpvc
+13682  kubectl exec -it task-pv-pod --namespace=forpvandpvc /bin/bash
+13683  kubectl get pod/task-pv-pod --namespace=forpvandpvc
+13684  kubectl describe pod/task-pv-pod --namespace=forpvandpvc
+13685  ssh saineel142c.mylabserver.com
+13686  kubectl exec -it task-pv-pod --namespace=forpvandpvc /bin/bash
+13687  history 
+13688  kubectl delete -f pvforpod.yml
+13689  kubectl apply -f pvforpod.yml
+13690  kubectl get pv
+13691  kubectl get pv --namespace=forpvandpvc
+13692  kubectl delete -f pvforpod.yml
+13693  kubectl get pv --namespace=forpvandpvc
+13694  vi podwithprojectedvolume.yml
+13695  ls
+13696  kubectl create ns all
+13697  vi podwithprojectedvolume.yml
+13698  cd Kubernetes-practice/cka/configure-pod-and-container/
+13699  vi podwithprojectedvolume.yml
+13700  kubectl apply -f  podwithprojectedvolume.yml
+13701  vi podwithprojectedvolume.yml
+13702  kubectl apply -f  podwithprojectedvolume.yml
+13703  kubectl delete -f  podwithprojectedvolume.yml
+13704  kubectl apply -f  podwithprojectedvolume.yml --namespace =all
+13705  vi podwithprojectedvolume.yml
+13706  kubectl get ns
+13707  kubectl apply -f podwithprojectedvolume.yml --namespace =all
+13708  kubectl apply -f podwithprojectedvolume.yml --namespace = all
+13709  kubectl get ns
+13710  kubectl get pods --namespace=qos-example
+13711  kubectl get pods --namespace=all
+13712  kubectl create -f podwithprojectedvolume.yml --namespace-all
+13713  kubectl create pod -f podwithprojectedvolume.yml --namespace-all
+13714  kubectl create pod -f podwithprojectedvolume.yml --namespace+all
+13715  kubectl create pod -f podwithprojectedvolume.yml --namespace=all
+13716  kubectl create -f podwithprojectedvolume.yml --namespace=all
+13717  kubectl create -f podwithprojectedvolume.yml --namespace-all
+13718  kubectl get pods --namespace=all
+13719  echo -n "admin" > ./username.txt
+13720  echo -n "1f2d1e2e67df" > ./password.txt
+13721  kubectl create secret generic user --from-file=./username.txt
+13722  kubectl create secret generic pass --from-file=./password.txt
+13723  ls
+13724  kubectl create secret generic user --from-file=./username.txt
+13725  kubectl create secret generic user --from-file=./username.txt --namespace=all
+13726  kubectl create secret generic user --from-file=./username.txt --namespace=allkubectl create secret generic pass --from-file=./password.txt --namespace=all
+13727  kubectl create secret generic pass --from-file=./password.txt --namespace=all
+13728  kubectl get pod podwithprojectedvolume --namespace=all --watch
+13729  kubectl exec -it podwithprojectedvolume --namespace=all /bin/sh
+13730  exit
+13731  su user
+13732  su linux
+13733  cd Kubernetes-practice/cka/
+13734  l
+13735  cd ..
+13736  git add *
+13737  git status 
+13738  git commit -m "adding files to configure pod and container folder"
+13739  git push 
+13740  cd cka/configure-pod-and-container/
+13741  ls
+13742  history 
+13743  ll
+13744  cat pv*
+13745  kubectl describe pv pvcfodpod
+13746  kubectl describe pv pvfodpod
+13747  kubectl get pv
+13748  kubectl describe pv pvforpod
+13749  kubectl describe pv pvforpod -o yaml
+13750  kubectl get pv pvforpod -o yaml
+13751  kubectl get pvc pvcforpod -o yaml
+13752  kubectl get ns
+13753  kubectl get pvc pvcforpod -o yaml --namespace=forpvandpvc
+13754  kubectl get pvc pvcforpod --namespace=forpvandpvc
+13755  kubectl get pvc --namespace=forpvandpvc
+13756  kubectl describe pvc pvcforpod --namespace=forpvandpvc
+13757  kubectl get pvc --namespace=forpvandpvc
+13758  kubectl describe pvc pvcforpod
+13759  kubectl get pvc --namespace=forpvandpvc
+13760  vi security-context-for-pod.yml
+13761  kubectl apply -f  security-context-for-pod.yml
+13762  vi security-context-for-pod.yml
+13763  kubectl apply -f  security-context-for-pod.yml --namespace=all
+13764  kubectl get pod/securitycontextforpod --namespace=all
+13765  kubectl exec -it pod/securitycontextforpod --namespace=all
+13766  kubectl exec -it pod/securitycontextforpod --namespace=all sh
+13767  kubectl exec -it pod securitycontextforpod --namespace=all sh
+13768  kubectl exec -it pod securitycontextforpod --namespace=all /bin/bash
+13769  kubectl exec -it volumeforpod -- /bin/bash
+13770  kubectl get pods --namespace=all
+13771  kubectl exec -it securitycontextforpod 
+13772  kubectl exec -it securitycontextforpod --sh
+13773  kubectl exec -it securitycontextforpod -- sh
+13774  kubectl exec -it securitycontextforpod --namespace=all sh
+13775  vi security-context-for-pod.yml
+13776  kubectl get pods --namespace=all
+13777  kubectl describe pod/task-pv-pod --namespace=forpvandpvc
+13778  kubectl describe pod/task-pv-pod --namespace=forpvandpvc | grep service
+13779  kubectl get pods --namespace=all
+13780  kubectl describe pod securitycontextforpod -o yaml
+13781  kubectl describe pod securitycontextforpod --namespace=all -o yaml
+13782  kubectl get pod securitycontextforpod --namespace=all -o yaml
+13783  kubectl get pod securitycontextforpod --namespace=all -o yaml | less
+13784  cd Kubernetes-practice/cka/configure-pod-and-container/
+13785  kubectl get serviceAccounts
+13786  kubectl apply -f - <<EOF
+13787  apiVersion: v1
+13788  kind: ServiceAccount
+13789  metadata:
+13790    name: build-robot
+13791  EOF
+13792  cat limitrange.yml 
+13793  cd ..
+13794  ls | grep -R limitran
+13795  cd
+13796  ls -l | grep -R limitran
+13797  cd Kubernetes-practice/
+13798  ls -l | grep -R limitran
+13799  history 
+13800  history | less
+13801  ls
+13802  cd cka/
+13803  history >> commands_5_8.txt 
