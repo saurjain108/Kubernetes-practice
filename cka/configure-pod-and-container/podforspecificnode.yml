@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: podfornode
+  labels:
+    env: test
+spec:
+  containers:
+  - name: podfornode-cnt
+    image: nginx
+    imagePullPolicy: IfNotPresent
+  nodeSelector:
+    game: soccer
