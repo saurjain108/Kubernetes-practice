@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: awsvolumeforpod
+spec:
+  containers:
+  - name: test
+    image: k8s.gcr.io/test-webserver
+    volumeMounts:
+    - mountPath: test/
+      name: test-volume
+  volumes:
+  - name: volumeaws
+    awsElasticBlockStore:
+      volumeID: <volume-id>
+      fsType: ext4
+
