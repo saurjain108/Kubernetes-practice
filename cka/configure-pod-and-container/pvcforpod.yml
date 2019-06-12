@@ -2,7 +2,7 @@ kind: PersistentVolumeClaim
 apiVersion: v1
 metadata:
   name: pvcfodpod
-  namespace: forpvandpvc
+  #  namespace: forpvandpvc
 spec:
   storageClassName: manual
   accessModes:
