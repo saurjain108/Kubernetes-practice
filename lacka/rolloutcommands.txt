@@ -1,0 +1,22 @@
+  646  kubectl describe deployment.apps/nameinfirstmetadata
+  647  while true; do curl http://10.106.99.128; done
+  648  kubectl set image deployment/nameinfirstmetadata app=linuxacademycontent/kubeserve:v2 --v 6
+  649  cat deployment.yml 
+  650  kubectl set image deployment/nameinfirstmetadata nameincontainer=linuxacademycontent/kubeserve:v2 --v 6
+  651  kubectl set image deployment/nameinfirstmetadata nameincontainer=linuxacademycontent/kubeserve:v1 --v 6
+  652  kubectl get rs
+  653  kubectl set image deployment/nameinfirstmetadata nameincontainer=linuxacademycontent/kubeserve:v3 --v 6
+  654  kubectl rollout undo deployment nameinfirstmetadata
+  655  kubectl rollout history deployment nameinfirstmetadata
+  656  kubectl rollout undo deployment nameinfirstmetadata --to-revision=4
+  657  kubectl set image deployment/nameinfirstmetadata app=linuxacademycontent/kubeserve:v4 --v 6
+  658  kubectl set image deployment/nameinfirstmetadata nameincontainer=linuxacademycontent/kubeserve:v4 --v 6
+  659  kubectl rollout pause deployment nameinfirstmetadata
+  660  kubectl rollout resume deployment nameinfirstmetadata
+  661  vi rooloutcommand.txt
+  662  cat rooloutcommand.txt 
+  663  ll
+  664  mv rooloutcommand.txt rolloutcommands.txt
+  665  history | tain -n 30
+  666  history | tail -n 30
+  667  history | tail -n 30 >> rolloutcommands.txt 
