@@ -3,6 +3,7 @@ kind: Pod
 metadata:
   name: busybox
 spec:
+  serviceAccountName: jenkins
   containers:
   - image: busybox:1.28.4
     name: busybox
