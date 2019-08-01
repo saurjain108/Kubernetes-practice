@@ -1,1 +1,4 @@
 kubectl label pod <podname> label=labelname
+While checking which POD to select the schedular folows the follwing steps 1.adiquate hardware on node 2.is node running out of resource 3. request for a specific node, in this it check for a specific label or port on node it needs to attach 4. volume required 5. taints and tolerate 6. affinity roles  
+ to run a pod on specific schedular user schedularName: <name of schedular> in metadata.spec section
+affinity is also one kind of label, but has two types 1. required and 2. preferred. requiredDuringSchedulingIgnoredDuringExecution and  preferredDuringSchedulingIgnoredDuringExecution
